@@ -21,8 +21,11 @@
         <li class="nav-item"><a class="nav-link" href="/contactUs">Contact Us</a></li>
     </ul>
     <div class="justify-content-end">
-        <a href="/register" class="btn btn-primary">Register</a>
-        <a href="/login" class="btn btn-success">Login</a>
+        <%if (!user){%><a href="/register" class="btn btn-primary">Register</a>
+        <a href="/login" class="btn btn-success">Login</a><%}
+        else{%>
+        <a href="/logout" class="btn btn-primary">Logout</a>
+        <%}%>
     </div>
 
 </nav>
