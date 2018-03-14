@@ -13,6 +13,9 @@ router.get('/jobSeeker', function(req, res, next) {
 router.get('/employer', function(req, res, next) {
     res.render('employer', { title: 'SMWDB - Employers', user: req.user  });
 });
+router.get('/help', function(req, res, next) {
+    res.render('help', { title: 'SMWDB - Contact Us',user: req.user });
+});
 router.get('/contactUs', function(req, res, next) {
     res.render('contactUs', { title: 'SMWDB - Contact Us', user: req.user  });
 });

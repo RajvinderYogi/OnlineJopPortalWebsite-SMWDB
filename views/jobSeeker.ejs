@@ -1,6 +1,70 @@
 <% include ../views/shared/header%>
 
+<div class="career_section">
+    <h3>Welcome to the Career Center</h3><hr>
+    <div class="container">
+        <div class="row">
+            <!--Find job section-->
+            <div class="col-3">
+                <h4>Find Job</h4>
+                <form>
+                    <fieldset>
+                        <label for="name">Serach by Name</label><br>
+                        <input type="text" required />
+                    </fieldset>
 
-<h1>Job Seeker Stuff</h1>
+                    <fieldset>
+                        <label for="location">Search by Location</label><br>
+                        <input type="text" required />
+                    </fieldset>
+                    <button class="btn btn-default">Find</button>
+                </form>
+            </div>
+            <!--Career Info Section -->
+            <div class="career_info col-6">
+                <h4>Build Your Own Career</h4>
+                <p>
+                    We are giving you best opportunity to find your career jobs into your field.here you can find more than 50,000+ jobs and more 1000+ partenship with employer. Other than that our expert will help you to find your job.
+                    You can also find a number of job resource and career advice to find a new jobs and we will tell you what sort of top three problems everybody do when they are applying for new jobs. Here you can also find best  tools for interview prepartion, new resume, latest news related to jobs and career quizs quizzes and tips how to make crticial decision during
+                    tough time
+                </p>
+                <!--Career Advice -->
 
-<% include ../views/shared/footer %>
+                <h5>Career Advice</h5>
+                <div class="row">
+                    <!--Most viewed -->
+                    <div class="col-4">
+                        <h6>Most Viewed Article</h6>
+                        <p>Best five tips for interview prepartion and how to pass it ?</p>
+                        <p>The most 10 cool jobs of the near future?</p>
+                        <p>Why Resume and cover letter good format is important when you applying for job?</p>
+                    </div>
+                    <!--Interview question-->
+                    <div class="col-4">
+                        <h6>Interview Question</h6>
+                        <p>Read first 30 frequently asked question during interview time?</p>
+                        <p>What kind of drees we need for interview and how to behave with interviewer?</p>
+                        <p>what sort of question you can ask during intervies time?</p>
+                        <p>what you need to know before interviews and why your first impression matter ?</p>
+                    </div>
+                    <!--Recent Graduate-->
+                    <div class="col-4">
+                        <h6>Recent Graduate</h6>
+                        <p>Great job opportunity for fresh graduate apply today and build your carreer, good salary and other benefits - click here to apply for this job.</p>
+                        <p>American IT technician company looking for new employee -specially recent graduate. Expert in
+                            time management, good communication skills. Click here to apply for this job.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Ad section-->
+            <div class="ad_section col-3">
+                <img src="/images/post.jpg" alt="ads"><br>
+                <button class="btn btn-default">Click Here</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<% include ../views/shared/footer.ejs %>
