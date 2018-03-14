@@ -45,6 +45,7 @@ router.get('/login', (req, res, next)=>{
 
     let messages = req.session.messages || [];
 
+    req.session.messages = [];
     res.render('login', {
         title:'SMWDB - Login',
         messages: messages
