@@ -54,7 +54,7 @@ router.get('/login', (req, res, next)=>{
 //Post:/login
 router.post('/login',
     passport.authenticate('local', {
-    successRedirect: '/employer',
+    successRedirect: '/jobSeeker',
     failureRedirect: '/login',
     failureMessage:'Invalid Login'
 }));
