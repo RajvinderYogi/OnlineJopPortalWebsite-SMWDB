@@ -1,6 +1,91 @@
-<% include ../views/shared/header%>
+<% include ../views/shared/header.ejs%>
+
+<!--main section-->
+<div class="slider_section">
+    <img src="/images/jobs.png" alt="job">
+</div>
+
+<!--latest posting info-->
+
+<div class="posting_section container">
+    <h3>Latest job posting</h3>
+    <div class="row">
+        <!--Find job section-->
+        <div class="col-3">
+            <h4>Find Job</h4>
+            <form>
+                <fieldset>
+                    <label for="name">Serach by Name</label><br>
+                    <input type="text" required />
+                </fieldset>
+
+                <fieldset>
+                    <label for="location">Search by Location</label><br>
+                    <input type="text" required />
+                </fieldset>
+                <button class="btn btn-default">Find</button>
+            </form>
+        </div>
+        <!-- Latest Job Posting Section -->
+        <div class="row col-6">
+            <div class="posting_list col-6">
+                <h4>Web Developer</h4>
+                <a href="#">voofa.ca</a>
+                <p> Looking for a Web Developer who has
+                    proficient skills of HTML,CSS and javascript.
+                    Posted: 1 day ago -- <a href="#">save job</a>
+                </p>
+            </div>
+            <div class="posting_list col-6">
+                <h4>Front-end Web developer</h4>
+                <a href="#">canexpert.ca</a>
+                <p> We are currently hiring a front end -developer with proficient skills of design.
+                    Posted: 1 day ago  -- <a href="#">save job</a>
+                </p>
+            </div>
+            <div class="posting_list col-6">
+                <h4>Graphic Designer</h4>
+                <a href="#">abc.ca</a>
+                <p> Looking for a Graphic designer with great skills of photoshop, Illustrator & design.
+                    Posted: 1 day ago -- <a href="#">save job</a>
+                </p>
+            </div>
+            <div class="posting_list col-6">
+                <h4>Network Analyst</h4>
+                <a href="#">RBCcanada.ca</a>
+                <p> Certified network analyst looking for a analyt who must have 2 year experience in this filed.
+                    Posted: 1 day ago  -- <a href="#">save job</a>
+                </p>
+            </div>
+            <div class="posting_list col-6">
+                <h4>Web Developer</h4>
+                <a href="#">mqsolution.ca</a>
+                <p> Web Developer/Designer Job Duties.Expert in Php, HTML,CSS & javascript
+                    Posted: 1 day ago -- <a href="#">save job</a>
+                </p>
+            </div>
+            <div class="posting_list col-6">
+                <h4>IT Technician</h4>
+                <a href="#">Turnsolution.ca</a>
+                <p> Must have 1-3 year experience in this field. Maintain, troubleshot company's network.
+                    Posted: 1 day ago  -- <a href="#">save job</a>
+                </p>
+            </div>
+            <!--Service section-->
+            <div class="col-6">
+                <button class="btn btn-primary">Upload Resume</button>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-primary">Post Job</button>
+            </div>
+        </div>
+        <!--Ad section-->
+        <div class="ad_section col-3">
+            <img src="/images/post.jpg" alt="ads"><br>
+            <button class="btn btn-default">Click Here</button>
+        </div>
+    </div><hr>
+</div>
 
 
-<h1>Nothing Here Yet</h1>
-
-<% include ../views/shared/footer %>
+<% include ../views/shared/footer.ejs %>

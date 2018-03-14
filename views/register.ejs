@@ -1,7 +1,8 @@
 <% include shared/header.ejs%>
-
+<div class="row">
+    <div class="col-6">
 <div class="align-items-center">
-<h2 class="page-header">Register</h2>
+<h2 class="page-header">Job Seeker</h2>
 
 <form method="post" action="/register">
 <fieldset class="form-group">
@@ -16,9 +17,34 @@
     <label class="control-label col-md-2" for="confirmPassword">Confirm Password</label>
     <input type="password" placeholder="Password" name="confirmPassword" id="confirmPassword">
 </fieldset>
-<button type="submit" class="offset-2 btn btn-primary col-md-1">Register</button>
+<button type="submit" class="offset-2 btn btn-primary col-md-4">Register</button>
     <hr />
     Already have an account?  <a href="/login" title="Login">Login</a>
 </form>
+</div>
+</div>
+    <div class="col-6">
+<div class="align-items-center">
+    <h2 class="page-header">Employer</h2>
+
+        <form method="post" action="/register">
+            <fieldset class="form-group">
+                <label class="control-label col-md-2" for="username">Email</label>
+                <input type="email" placeholder="Email" name="username" id="username">
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="control-label col-md-2" for="password">Password</label>
+                <input type="password" placeholder="Password" name="password" id="password">
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="control-label col-md-2" for="confirmPassword">Confirm Password</label>
+                <input type="password" placeholder="Password" name="confirmPassword" id="confirmPassword">
+            </fieldset>
+            <button type="submit" class="offset-2 btn btn-primary col-md-4">Register</button>
+            <hr />
+            Already have an account?  <a href="/login" title="Login">Login</a>
+        </form>
+    </div>
+</div>
 </div>
 <% include shared/footer.ejs %>
