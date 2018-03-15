@@ -34,7 +34,7 @@ router.post('/register', function (req, res, next) {
             username: req.body.username,
     }),
     req.body.password,
-    function(err, account) {
+    function(err, user) {
     if (err) {
         console.log(err);
         res.render('register');
