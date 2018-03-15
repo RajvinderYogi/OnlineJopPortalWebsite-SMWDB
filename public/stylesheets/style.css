@@ -26,7 +26,9 @@
 }
 
 .navbar ul li a:hover{
-  color: royalblue;
+  color: white;
+  background-color:royalblue;
+  border-radius:20px;
 }
 
 
