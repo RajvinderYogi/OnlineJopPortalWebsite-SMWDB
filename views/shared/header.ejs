@@ -40,12 +40,15 @@
         <a href="/login" class="btn btn-success">Login</a><%}
         else{%>
 
-            <p><%= user.username%></p>
-        <div class="justify-content-end">
-            <a class="btn btn-dark" href="/profile">Profile</a>
-            <a class="btn btn-danger" href="/logout">Logout</a>
+        <div class="dropdown">
+            <a onclick="myFunction()" href="#" class="dropbtn"><%= user.username%></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/profile">Profile</a>
+                <a href="/logout">Logout</a>
+            </div>
         </div>
-        <%}%>
+            </div>
+           <%}%>
     </div>
 
 </nav>
