@@ -1,0 +1,24 @@
+<% include ../shared/header.ejs %>
+<h1>Job Seeker Details</h1>
+
+<table class="table table-striped table-hover">
+      <tr>
+        <td>Email</td>
+        <td><%= user.username %></td>
+    </tr>
+    <tr>
+        <td>First Name:</td>
+        <td><%= jobSeekers.fName %></td>
+    </tr>
+    <tr>
+        <td>Last Name:</td>
+        <td><%= jobSeekers.lName %></td>
+    </tr>
+    <tr>
+        <td>Contact number:</td>
+        <td><%= jobSeekers.phoneNo %></td>
+    </tr>
+
+</table>
+
+<% include ../shared/footer.ejs %>

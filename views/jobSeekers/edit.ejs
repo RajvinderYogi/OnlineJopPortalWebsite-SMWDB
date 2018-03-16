@@ -1,0 +1,19 @@
+<% include ../shared/header.ejs%>
+<h1>Update Manufacturer Details</h1>
+<form method="post">
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="fName">First Name*: </label>
+        <input name="fName" id="fName" value="<%= jobseekers.fName%>" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="lName">Last Name*: </label>
+        <input name="lName" id="lName" value="<%= jobseekers.lName%>" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="phoneNo">Contact No*: </label>
+        <input  type="tel" name="phoneNo" id="phoneNo" value="<%= jobseekers.phoneNo%>" required />
+    </fieldset>
+    <button class="offset-2 btn btn-primary col-md-1">Update</button>
+</form>
+
+<% include ../shared/footer.ejs%>
