@@ -1,4 +1,11 @@
+/*body*/
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
 /*header scetion*/
+
 .nav{
   margin: 5px;
 }
