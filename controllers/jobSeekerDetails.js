@@ -1,18 +1,20 @@
 let express = require('express');
 let router = express.Router();
-let Jobseeker = require('../models/jobSeekerDetail');
+let User = require('../models/user');
+let globalFunction =require('../config/globalFunctions');
 
 /* GET  page. */
-router.get('/', (req, res, next) => {
+router.get('/', globalFunction.userLoggedIn, (req, res, next) => {
 
-    Jobseeker.find((err, jobseekers)=>{
+    User.find((err, users)=>{
         if (err){
             console.log(err);
         }
         else {
-            res.render('jobseekers/index', {
-                title:"Job Seeker Details", user: req.user,
-                jobseekers:jobseekers
+            res.render('jobSeekers/index', {
+                title:"Job Seeker Details",
+                user: req.user,
+                users:users
             });
         }
     });
@@ -20,20 +22,38 @@ router.get('/', (req, res, next) => {
 
 
 //GET:  /jobseekers/edit
-router.get('/edit/:_id', (req, res, next)=>{
+router.get('/edit/:_id', globalFunction.userLoggedIn, (req, res, next)=>{
     let _id= req.params._id;
-    Jobseeker.findById(_id, (err, jobseekers)=>{
+    User.findById(_id, (err, users)=>{
         if(err){
             console.log(err);
         }
         else{
-            res.render('jobseekers/edit', {
+            res.render('jobSeekers/edit', {
                 title:'Edit Your Details',
-
-                jobseekers: jobseekers
+                user: req.user,
+                users:users
             });
         }
     });
+});
+//POST: /jobSeekers/edit
+router.post('/edit/:_id', globalFunction.userLoggedIn, (req, res, next)=>{
+    let _id = req.params._id;
+
+    User.update({_id:_id},
+        {$set:{
+                fName: req.body.fName,
+                lName:req.body.lName,
+                phoneNo: req.body.phoneNo
+            }}, null, (err)=>{
+            if (err){
+                console.log(err);
+            }
+            else {
+                res.redirect('/jobSeekers/')
+            }
+        });
 });
 //make public
 module.exports = router;
