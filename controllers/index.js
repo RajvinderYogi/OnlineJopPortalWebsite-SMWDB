@@ -31,7 +31,11 @@ router.get('/register', (req, res, next)=>{
 router.post('/register', function (req, res, next) {
     User.register(
         new User ({
+            fName: req.body.fName,
+            lName:req.body.lName,
             username: req.body.username,
+            phoneNo: req.body.phoneNo,
+            userType: "jobseeker"
     }),
     req.body.password,
     function(err, user) {
