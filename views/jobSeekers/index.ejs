@@ -8,17 +8,18 @@
     </tr>
     <tr>
         <td>First Name:</td>
-        <td><%= jobSeekers.fName %></td>
+        <td><%= user.fName %></td>
     </tr>
     <tr>
         <td>Last Name:</td>
-        <td><%= jobSeekers.lName %></td>
+        <td><%= user.lName %></td>
     </tr>
     <tr>
         <td>Contact number:</td>
-        <td><%= jobSeekers.phoneNo %></td>
+        <td><%= user.phoneNo %></td>
     </tr>
 
 </table>
+<a href="../jobSeekers/edit/<%= user._id%>" class="btn btn-primary col-md-2">Edit</a>
 
 <% include ../shared/footer.ejs %>
