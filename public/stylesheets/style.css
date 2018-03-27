@@ -1,4 +1,11 @@
+/*body*/
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
 /*header scetion*/
+
 .nav{
   margin: 5px;
 }
@@ -26,7 +33,9 @@
 }
 
 .navbar ul li a:hover{
-  color: royalblue;
+  color: white;
+  background-color:royalblue;
+  border-radius:20px;
 }
 
 
@@ -102,6 +111,7 @@
 .posting_section h3{
   padding: 2%;
   text-align: center;
+  color: khaki;
 }
 .ad_section img{
   width: 60%;
