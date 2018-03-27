@@ -1,66 +1,62 @@
 <% include shared/header.ejs%>
+
 <div class="container row">
     <div class="col-6">
-<div class="align-items-center">
-<h2 class="page-header">Job Seeker</h2>
 
-<form method="post" action="/register">
-    <fieldset class="form-group">
-        <label class="control-label col-md-2" for="fName">First Name</label>
-        <input type="text" placeholder="First Name" name="fName" id="fName">
-    </fieldset>
-    <fieldset class="form-group">
-        <label class="control-label col-md-2" for="lName">Last Name</label>
-        <input type="text" placeholder="Last Name" name="lName" id="lName">
-    </fieldset>
-<fieldset class="form-group">
-    <label class="control-label col-md-2" for="username">Email</label>
-    <input type="email" placeholder="Email" name="username" id="username">
-</fieldset>
-<fieldset class="form-group">
-    <label class="control-label col-md-2" for="password">Password</label>
-    <input type="password" placeholder="Password" name="password" id="password">
-</fieldset>
-<fieldset class="form-group">
-    <label class="control-label col-md-2" for="confirmPassword">Confirm Password</label>
-    <input type="password" placeholder="Password" name="confirmPassword" id="confirmPassword">
-</fieldset>
-    <fieldset class="form-group">
-        <label class="control-label col-md-2" for="phoneNo">Phone Number</label>
-        <input type="tel" placeholder="Phone Number" name="phoneNo" id="phoneNo">
-    </fieldset>
-    <!--<fieldset class="form-group">-->
-        <!--<label class="control-label col-md-2" for="resume">Resume</label>-->
-        <!--<input type="file" placeholder="Resume" name="resume" id="resume">-->
-    <!--</fieldset>-->
-<button type="submit" class="offset-2 btn btn-primary col-md-4">Register</button>
-    <hr />
-    Already have an account?  <a href="/login" title="Login">Login</a>
-</form>
-</div>
-</div>
-    <div class="col-6">
-<div class="align-items-center">
-    <h2 class="page-header">Employer</h2>
+        <div class="col-12">
+            <div class="align-items-center">
+                <h2 class="page-header">Job Seeker</h2>
 
-        <form method="post" action="/register">
-            <fieldset class="form-group">
-                <label class="control-label col-md-2" for="username">Email</label>
-                <input type="email" placeholder="Email" name="username" id="username">
-            </fieldset>
-            <fieldset class="form-group">
-                <label class="control-label col-md-2" for="password">Password</label>
-                <input type="password" placeholder="Password" name="password" id="password">
-            </fieldset>
-            <fieldset class="form-group">
-                <label class="control-label col-md-2" for="confirmPassword">Confirm Password</label>
-                <input type="password" placeholder="Password" name="confirmPassword" id="confirmPassword">
-            </fieldset>
-            <button type="submit" class="offset-2 btn btn-primary col-md-4">Register</button>
-            <hr />
-            Already have an account?  <a href="/login" title="Login">Login</a>
-        </form>
-    </div>
-</div>
-</div>
+                <form method="post" action="/register">
+                    <fieldset class="form-group">
+                        <label class="control-label col-md-2" for="userType">Account Type</label>
+                        <select onchange="EmpOrJob(this);" placeholder="choose.." name="userType" id="userType" required>
+                            <option disabled selected>Choose...</option>
+                            <option value="jobseeker">Job Seeker</option>
+                            <option value="employer">Employer</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerFName" style="display:none;">
+                        <label class="control-label col-md-2" for="fName">First Name</label>
+                        <input type="text" placeholder="First Name" name="fName" id="fName" >
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerLName" style="display:none;">
+                        <label class="control-label col-md-2" for="lName">Last Name</label>
+                        <input type="text" placeholder="Last Name" name="lName" id="lName" >
+                    </fieldset>
+                    <fieldset class="form-group" id="ifEmployerCName" style="display:none;">
+                        <label class="control-label col-md-2" for="cName">Company Name</label>
+                        <input type="text" placeholder="Company Name" name="cName" id="cName" >
+                    </fieldset>
+                    <fieldset class="form-group" id="ifEmployerCPerson" style="display:none;">
+                        <label class="control-label col-md-2" for="cPerson">Contact Person</label>
+                        <input type="text" placeholder="Contact Person" name="cPerson" id="cPerson" >
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="control-label col-md-2" for="username">Email</label>
+                        <input type="email" placeholder="Email" name="username" id="username" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="control-label col-md-2" for="password">Password</label>
+                        <input type="password" placeholder="Password" name="password" id="password" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="control-label col-md-2" for="confirmPassword">Confirm Password</label>
+                        <input type="password" placeholder="Password" name="confirmPassword" id="confirmPassword" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="control-label col-md-2" for="phoneNo">Phone Number</label>
+                        <input type="tel" placeholder="Phone Number" name="phoneNo" id="phoneNo">
+                    </fieldset>
+                    <!--<fieldset class="form-group">-->
+                    <!--<label class="control-label col-md-2" for="resume">Resume</label>-->
+                    <!--<input type="file" placeholder="Resume" name="resume" id="resume">-->
+                    <!--</fieldset>-->
+                    <button type="submit" class="offset-2 btn btn-primary col-md-4">Register</button>
+                    <hr />
+                    Already have an account?  <a href="/login" title="Login">Login</a>
+                </form>
+            </div>
+        </div>
+
 <% include shared/footer.ejs %>

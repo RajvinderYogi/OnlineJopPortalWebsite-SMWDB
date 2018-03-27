@@ -45,6 +45,8 @@ router.post('/edit/:_id', globalFunction.userLoggedIn, (req, res, next)=>{
         {$set:{
                 fName: req.body.fName,
                 lName:req.body.lName,
+                cName:req.body.cName,
+                cPerson: req.body.cPerson,
                 phoneNo: req.body.phoneNo
             }}, null, (err)=>{
             if (err){
