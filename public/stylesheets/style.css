@@ -1,6 +1,6 @@
 /*body*/
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', 'Open Sans', sans-serif;
 }
 
 /*header scetion*/
@@ -31,11 +31,13 @@ nav ul li a{
   color: #000000;
 }
 
-/*nav ul li a:hover{*/
-/*color: white;*/
-/*background-color:royalblue;*/
-/*border-radius: 10px;*/
-/*}*/
+
+.navbar ul li a:hover{
+  color: white;
+  background-color:royalblue;
+  border-radius:20px;
+}
+
 
 
 .navbar .profile_section{

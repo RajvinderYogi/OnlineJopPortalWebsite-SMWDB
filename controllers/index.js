@@ -5,7 +5,7 @@ let User = require('../models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'SMWDB - Home', user: req.user  });
+    res.render('index', { title: 'SMWDB - Home', user: req.user  });
 });
 router.get('/jobSeeker', function(req, res, next) {
     res.render('jobSeeker', { title: 'SMWDB - Job Seeker', user: req.user });
@@ -31,18 +31,24 @@ router.get('/register', (req, res, next)=>{
 router.post('/register', function (req, res, next) {
     User.register(
         new User ({
+            fName: req.body.fName,
+            lName:req.body.lName,
+            cName:req.body.cName,
+            cPerson:req.body.cPerson,
+            userType: req.body.userType,
             username: req.body.username,
-    }),
-    req.body.password,
-    function(err, account) {
-    if (err) {
-        console.log(err);
-        res.render('register');
-    }
-    else {
-            res.redirect('/login');
-    }
-    });
+            phoneNo: req.body.phoneNo
+        }),
+        req.body.password,
+        function(err, user) {
+            if (err) {
+                console.log(err);
+                res.render('register');
+            }
+            else {
+                res.redirect('/login');
+            }
+        });
 });
 
 router.get('/login', (req, res, next)=>{
@@ -60,10 +66,10 @@ router.get('/login', (req, res, next)=>{
 //Post:/login
 router.post('/login',
     passport.authenticate('local', {
-    successRedirect: '/jobSeeker',
-    failureRedirect: '/login',
-    failureMessage:'Invalid Login'
-}));
+        successRedirect: '../jobSeekers',
+        failureRedirect: '/login',
+        failureMessage:'Invalid Login'
+    }));
 
 //GET: /logout
 router.get('/logout', (req, res, next)=>{
