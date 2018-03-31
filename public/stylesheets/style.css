@@ -1,7 +1,6 @@
 /*body*/
 body{
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', 'Open Sans', sans-serif;
 }
 
 /*header scetion*/
@@ -28,15 +27,17 @@ body{
   padding: 20px;
 }
 
-.navbar ul li a{
+nav ul li a{
   color: #000000;
 }
+
 
 .navbar ul li a:hover{
   color: white;
   background-color:royalblue;
   border-radius:20px;
 }
+
 
 
 .navbar .profile_section{
@@ -164,20 +165,56 @@ body{
   width: 40%;
 }
 
-/*service center
-============================*/
 
-.service{
 
-  width:100%;
-  padding: 2.5%;
-  background: gainsboro;
-  display: block;
+/*need help form ===
+=========================*/
+.help img{
+  width: 100%;
+}
+
+.help .row{
+  margin: 10px;
   text-align: center;
 }
 
-.service_center img {
+.help .row h6{
+  text-align: justify;
+}
+
+.resume_help{
+  padding: 10px;
+}
+
+.resume_help img{
   width: 70%;
+}
+
+.search_tips{
+  padding: 10px;
+
+}
+.search_tips img {
+  margin: 10px;
+  width: 100%;
+}
+
+.career_news a{
+  color: black;
+}
+
+
+/*Contact Page ===
+================================*/
+
+.staff_member{
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+.staff_member img{
+  width: 20%;
+  border-radius: 100px;
 }
 /*footer section
 -------------------*/

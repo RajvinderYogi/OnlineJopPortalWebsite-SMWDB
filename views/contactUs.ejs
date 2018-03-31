@@ -1,7 +1,55 @@
 <% include ../views/shared/header%>
+<div class="contact container">
+    <h2>Contact Us </h2><hr>
+    <div class="row">
+        <!--Contact_detail form-->
+        <div class="contact_detail col-4    ">
+            <address>
+                OFFICE LOCATION: <br>
+                18 Alliance blvd.
+                Unit 22,<br>
+                Barrie, ON L4M 5A5<br><br>
 
-
-<h1>Contact Us </h1>
-<p> Please fill the form:</p>
+                tel: 705.725.1011<br>
+                or 1.800.337.4598<br>
+                fax: 1.888.739.8347
+            </address>
+        </div>
+        <!--Contact form-->
+        <div class="contact_form col-8">
+            <p>We are here to help you if have any question send your message we will get you soon</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input class="form-control" id="name" type="text" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <Input class="form-control" id="Email" type="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message"></textarea>
+                </div>
+                <button class="btn btn-primary">Send</button>
+            </form>
+        </div>
+        <!--Company senior Officer-->
+    </div>
+    <div class="staff_member container">
+        <div class="row">
+            <div class="col-6">
+                <img src="/images/susan_laycock.jpg" alt="susan_laycock" />
+                <h3>Susan Laycock</h3>
+                <p>Executive Director</p>
+            </div>
+            <div class="col-6">
+                <img src="/images/Rob_shepard.jpg" alt="rob_sherpard" />
+                <h3>Rob Shepard</h3>
+                <p>Project Facilitator</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <% include ../views/shared/footer %>
