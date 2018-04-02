@@ -1,0 +1,28 @@
+<% include ../shared/header.ejs %>
+<h1>Posted Jobs</h1>
+
+<%if (user.userType === 'employer'){%>
+<a href="../postJobs/add"> Add New Job</a>
+<%}%>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Requirements</th>
+        <%if (user.userType === 'employer'){%>
+        <th>Edit/Delete</th>
+        <%}%>
+    </tr>
+    <% for(i=0; i<postjobs.length; i++) { %>
+    <tr >
+        <td><%= postjobs[i].title %></td>
+        <td><%= postjobs[i].description %></td>
+        <td><%= postjobs[i].requirements %></td>
+        <%if (user.userType === 'employer'){%>
+       <td><a href="/postJobs/edit/<%= postjobs[i]._id%>" class="btn btn-warning col-md-2">Edit Job</a>
+        <a href="/postJobs/delete/<%= postjobs[i]._id%>" class="btn btn-danger col-md-3" onclick="return confirm('Are you sure want to delete this Job Posting?')"> Delete Job</a></td>
+        <%}%>
+    </tr>
+    <%}%>
+</table>
+<% include ../shared/footer.ejs  %>

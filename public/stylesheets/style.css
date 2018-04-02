@@ -1,5 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css?family=Trirong');
 /*header section*/
+
+/*body*/
+body{
+  font-family: 'Rubik', 'Open Sans', sans-serif;
+}
+
+/*header scetion*/
+
 .nav{
   margin: 5px;
 }
@@ -26,15 +35,16 @@
 .navbar ul li{
   padding: 25px;
 }
-
 .navbar ul li a{
   color: #218838;
 }
+
 
 .navbar ul li a:hover{
   color: #ffffff;
   background: #0069d9;
 }
+
 
 
 .navbar .profile_section{
@@ -50,6 +60,44 @@
 
 }
 
+/*dropdown menu*/
+.dropbtn {
+  color: royalblue;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  color: lightgreen;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: royalblue;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: lightgreen}
+
+.show {display:block;}
 
 /*Slider section
 -----------------------*/
@@ -122,6 +170,7 @@
 .posting_section h3{
   padding: 2%;
   text-align: center;
+  color: khaki;
 }
 .ad_section img{
   width: 60%;
@@ -174,20 +223,56 @@
   width: 40%;
 }
 
-/*service center
-============================*/
 
-.service{
 
-  width:100%;
-  padding: 2.5%;
-  background: gainsboro;
-  display: block;
+/*need help form ===
+=========================*/
+.help img{
+  width: 100%;
+}
+
+.help .row{
+  margin: 10px;
   text-align: center;
 }
 
-.service_center img {
+.help .row h6{
+  text-align: justify;
+}
+
+.resume_help{
+  padding: 10px;
+}
+
+.resume_help img{
   width: 70%;
+}
+
+.search_tips{
+  padding: 10px;
+
+}
+.search_tips img {
+  margin: 10px;
+  width: 100%;
+}
+
+.career_news a{
+  color: black;
+}
+
+
+/*Contact Page ===
+================================*/
+
+.staff_member{
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+.staff_member img{
+  width: 20%;
+  border-radius: 100px;
 }
 /*footer section
 -------------------*/
