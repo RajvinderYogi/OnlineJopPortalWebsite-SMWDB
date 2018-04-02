@@ -1,32 +1,39 @@
-/*header scetion*/
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+/*header section*/
 .nav{
   margin: 5px;
 }
+.action{
+  position: relative;
+  top: -100px;
+  right: -60px;
+}
 .navbar img{
-  width: 300px;
-  height: 200px;
+  width: 240px;
+  height: 170px;
 }
 
 .navbar .collapse{
   position: relative;
-  top: 70px;
+  top: 50px;
+  justify-content: center;
 }
 .navbar ul{
   padding: 50px;
   font-size: 18px;
-  font-weight: 500;
 }
 
 .navbar ul li{
-  padding: 20px;
+  padding: 25px;
 }
 
 .navbar ul li a{
-  color: #000000;
+  color: #218838;
 }
 
 .navbar ul li a:hover{
-  color: royalblue;
+  color: #ffffff;
+  background: #0069d9;
 }
 
 
@@ -57,6 +64,57 @@
 
 .slider_section img{
   width: 40%;
+}
+
+/*Main Section */
+
+.welcome{
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: bold ;
+  font-family: 'Trirong', serif;
+}
+
+.welcome-2{
+  text-align: center;
+  font-size: 2.0em;
+  font-family: 'Trirong', serif;
+}
+
+#job-seeker{
+  background-color: #218838;
+  font-size: 2.3em;
+  position: relative;
+  margin-left:55%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  color: white;
+}
+
+#job-seeker:hover{
+  background-color: #0069d9;
+}
+
+#employer{
+  background-color: #218838;
+  font-size: 2.3em;
+  position: relative;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  color: white;
+}
+
+#employer:hover{
+  background-color: #0069d9;
+}
+
+.or{
+  font-size: 2.0em;
+  font-weight: bold ;
+  font-family: 'Trirong', serif;
+  margin-left: 35%;
+  margin-top: 8%;
 }
 
 /*posting_section
