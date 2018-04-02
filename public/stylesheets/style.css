@@ -228,6 +228,15 @@ nav ul li a{
   width: 20%;
   border-radius: 100px;
 }
+
+
+/*Login Page =
+===============*/
+
+.alert{
+  border-radius: 15px;
+  padding: 20px;
+}
 /*footer section
 -------------------*/
 footer {

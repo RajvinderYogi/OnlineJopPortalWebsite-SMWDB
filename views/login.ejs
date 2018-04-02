@@ -1,24 +1,27 @@
 <% include shared/header.ejs%>
 
-<h2 class="page-header">Account Login</h2>
-<%if (messages.length > 0) {%>
-<div class="alert-danger"><p><%= messages %></p></div>
-<%}
-else {%>
-<div class="alert-info"><p>Please Enter Email and Password.</p></div>
-<%}%>
-<form method="post">
-    <fieldset class="form-group">
-        <label class="control-label col-md-2" for="username">Email</label>
-        <input type="email" id="username" name="username" placeholder="Email">
-    </fieldset>
-    <fieldset class="form-group">
-        <label class="control-label col-md-2" for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Password">
-    </fieldset>
-    <button type="submit" class="offset-2 btn btn-primary col-md-1">Submit</button>
-    <hr />
-    Make an Account  <a href="/register" title="Register">Register</a>
-</form>
+<div class="login_form container">
 
+    <h2 class="page-header">Account Login</h2>
+        <%if (messages.length > 0) {%>
+        <div class="alert-danger"><p class="alert"><%= messages %></p></div>
+        <%}
+        else {%>
+        <div class="alert-info"><p class="alert">Please Enter Email and Password.</p></div>
+        <%}%>
+        <form method="post" class="offset-1">
+            <fieldset class="form-group">
+                <label for="username">Email</label>
+                <input  class="form-control col-md-3" type="email" id="username" name="username" placeholder="Email">
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control col-md-3" type="password" id="password" name="password" placeholder="Password">
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <hr />
+            Make an Account  <a href="/register" title="Register">Register</a>
+    </form>
+
+</div>
 <% include shared/footer.ejs %>
