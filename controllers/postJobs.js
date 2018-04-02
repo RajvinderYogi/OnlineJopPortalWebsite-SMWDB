@@ -75,10 +75,11 @@ router.post('/edit/:_id', globalFunction.userLoggedIn, (req, res, next)=>{
                 console.log(err);
             }
             else {
-                res.redirect('/postJob')
+                res.redirect('/postJobs')
             }
         });
 });
+
 //GET: /Delete
 router.get('/delete/:_id', globalFunction.userLoggedIn, (req, res, next) =>{
     let _id= req.params._id;
