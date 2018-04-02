@@ -9,13 +9,12 @@
     <link rel="icon" href="images/favicon.ico" type="image">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rubik" rel="stylesheet">
-
     <title><%= title %></title>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg ">
-        <img src="images/SMWDB_logo.png" alt="SMWDB_logo">
+    <nav class="navbar navbar-expand-lg">
+        <a href="/" ><img src="images/SMWDB_logo.png" alt="SMWDB_logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +36,7 @@
                     <a class="nav-link" href="/contactUs">Contact Us</a>
                 </li>
             </ul>
-    <div class="justify-content-end">
+    <div class="profile_section justify-content-end">
         <%if (!user){%><a href="/register" class="btn btn-primary">Register</a>
         <a href="/login" class="btn btn-success">Login</a><%}
         else{%>
