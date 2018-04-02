@@ -144,20 +144,23 @@ nav ul li a{
 
 .employer_slider {
   width:100%;
-  padding: 2.5%;
+  padding: 60px;
   background: gainsboro;
   display: block;
   text-align: center;
 }
 
 .employer_slider img{
-  width:40%;
+  width: 50%;
 }
 
+.employer_text{
+  position: relative;
+  top: 35px;
+}
 .employer_service{
-  padding: 25px;
+  padding: 55px;
 }
-
 
 .employer_choice{
   width: 100%;
@@ -184,7 +187,13 @@ nav ul li a{
 .help .row h6{
   text-align: justify;
 }
-
+.faq h6{
+  padding: 10px;
+  background: grey;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .resume_help{
   padding: 10px;
 }
@@ -242,19 +251,19 @@ footer p{
 }
 
 .fa-facebook{
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .fa-twitter{
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .fa-instagram{
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .fa-linkedin{
-  font-size: 45px;
+  font-size: 35px;
 }
 /*Mobile format
 -----------------------*/
