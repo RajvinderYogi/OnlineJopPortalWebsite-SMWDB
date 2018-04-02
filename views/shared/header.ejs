@@ -20,27 +20,28 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="nav nav-tabs nav-fill">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/jobSeeker">Job Seeker</a>
+                    <a class="nav-link" href="/jobSeeker">JOB SEEKER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/employer">Employers</a>
+                    <a class="nav-link" href="/employer">EMPLOYERS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/help">Help</a>
+                    <a class="nav-link" href="/help">HELP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contactUs">Contact Us</a>
+                    <a class="nav-link" href="/contactUs">CONTACT US</a>
                 </li>
             </ul>
-    <div class="justify-content-end">
-        <%if (!user){%><a href="/register" class="btn btn-primary">Register</a>
-        <a href="/login" class="btn btn-success">Login</a><%}
-        else{%>
+            <div class="action">
+                <%if (!user){%><a href="/register" class="btn btn-primary">Register</a>
+                <a href="/login" class="btn btn-success">Login</a><%}
+                else{%>
+
 
         <div class="dropdown">
             <a onclick="myFunction()" href="#" class="dropbtn"><%= user.username%></a>
@@ -54,6 +55,7 @@
     </div>
 
 </nav>
+
 </header>
 
 <main role="main">
