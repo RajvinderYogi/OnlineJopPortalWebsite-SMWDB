@@ -8,8 +8,14 @@
             <img src="/images/employer.png" alt="employer">
         </div>
         <div class="col-5">
-            <h4>ACE EMPLOYER ZONE</h4>
-            <button class="btn btn-primary">Register Now</button>
+            <h4>EMPLOYER ZONE</h4>
+            <%if (user){%>
+            <%if (user.userType === 'employer'){%>
+            <a href="postJobs" class="btn btn-info">Post Jobs</a>
+            <%}%>
+            <%}%>
+            <a href="register" class="btn btn-primary">Register Now</a>
+
         </div>
     </div>
 </div>
