@@ -1,0 +1,17 @@
+<% include ../shared/header.ejs %>
+<h1>Employers</h1>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Username</th>
+        <th>Company Name</th>
+        <th>Contact Person</th>
+    </tr>
+    <% for(i=0; i<employers.length; i++) { %>
+    <tr>
+        <td><%= employers[i].username %></td>
+        <td><%= employers[i].cName %></td>
+        <td><%= employers[i].cPerson %></td>
+    </tr>
+    <%}%>
+</table>
+<% include ../shared/footer.ejs %>

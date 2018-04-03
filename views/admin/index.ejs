@@ -1,0 +1,13 @@
+<%if (user.userType == "admin"){%>
+<% include ../shared/header.ejs %>
+<h1>Dashboard</h1>
+<div class="offset-4 col-md-6">
+    <a class="btn btn-warning offset-1" href="/admin/jobseekers">Job Seekers</a>
+    <a class="btn btn-primary offset-1" href="/admin/employers">Employers</a>
+</div>
+
+<% include ../shared/footer.ejs %>
+<%}
+else{%>
+<h1> Sorry You do not have Permission to access this page.</h1>
+<%}%>

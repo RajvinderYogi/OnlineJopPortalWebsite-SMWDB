@@ -37,11 +37,15 @@
                     <a class="nav-link" href="/contactUs">CONTACT US</a>
                 </li>
             </ul>
-            <div class="action">
-                <%if (!user){%><a href="/register" class="btn btn-primary">Register</a>
-                <a href="/login" class="btn btn-success">Login</a><%}
-                else{%>
 
+    <div class="justify-content-end">
+        <%if (!user){%>
+        <a href="/register" class="btn btn-primary">Register</a>
+        <a href="/login" class="btn btn-success">Login</a><%}
+        else{%>
+        <%if (user.userType === "admin"){%>
+        <a href="/admin/">Go To Dashboard</a>
+        <%}%>
 
         <div class="dropdown">
             <a onclick="myFunction()" href="#" class="dropbtn"><%= user.username%></a>
