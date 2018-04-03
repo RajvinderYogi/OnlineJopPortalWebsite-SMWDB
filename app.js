@@ -16,6 +16,7 @@ const localStrategy = require('passport-local').Strategy;
 var index = require('./controllers/index');
 const jsd = require('./controllers/jobSeekerDetails');
 const postJobs = require('./controllers/postJobs');
+const Admin = require('./controllers/admin');
 
 
 var app = express();
@@ -58,6 +59,8 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', index);
 app.use('/jobSeekers', jsd);
 app.use('/postJobs', postJobs);
+app.use('/admin', Admin);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
