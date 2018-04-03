@@ -2,6 +2,7 @@ let express = require('express');
 let router = express.Router();
 let passport =require('passport');
 let User = require('../models/user');
+let globalFunction =require('../config/globalFunctions');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -66,7 +67,7 @@ router.get('/login', (req, res, next)=>{
 //Post:/login
 router.post('/login',
     passport.authenticate('local', {
-        successRedirect: '../jobSeekers',
+        successRedirect:'/',
         failureRedirect: '/login',
         failureMessage:'Invalid Login'
     }));

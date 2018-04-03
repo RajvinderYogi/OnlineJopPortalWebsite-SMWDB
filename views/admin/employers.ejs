@@ -1,0 +1,22 @@
+<% include ../shared/header.ejs %>
+<%if (user.userType == "admin"){%>
+<h1>Employers</h1>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Username</th>
+        <th>Company Name</th>
+        <th>Contact Person</th>
+    </tr>
+    <% for(i=0; i<employers.length; i++) { %>
+    <tr>
+        <td><%= employers[i].username %></td>
+        <td><%= employers[i].cName %></td>
+        <td><%= employers[i].cPerson %></td>
+    </tr>
+    <%}%>
+</table>
+<%}
+else{%>
+<h1> Sorry You do not have Permission to access this page.</h1>
+<%}%>
+<% include ../shared/footer.ejs %>

@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+/*header section*/
+
 /*body*/
 body{
   font-family: 'Rubik', 'Open Sans', sans-serif;
@@ -8,35 +12,47 @@ body{
 .nav{
   margin: 5px;
 }
+.action{
+  position: relative;
+  top: -100px;
+  right: -60px;
+}
 .navbar img{
-  width: 300px;
-  height: 200px;
+  width: 240px;
+  height: 170px;
 }
 
 .navbar .collapse{
   position: relative;
-  top: 70px;
+  top: 50px;
+  justify-content: center;
 }
 .navbar ul{
   padding: 50px;
   font-size: 18px;
-  font-weight: 500;
 }
 
 .navbar ul li{
-  padding: 20px;
+  padding: 25px;
 }
-
-nav ul li a{
-  color: #000000;
+.navbar ul li a{
+  color: #218838;
+}
+.nav-tabs{
+  border-bottom: none;
 }
 
 .navbar ul li a:hover{
+<<<<<<< HEAD
   border-bottom: 1px solid purple;
   border-right: 1px solid purple;
   box-shadow: 2px 2px #888888;
   overflow: hidden;
   z-index: 2;
+=======
+  color: #ffffff;
+  background: #0069d9;
+>>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
 }
 
 .navbar .profile_section{
@@ -54,11 +70,20 @@ nav ul li a{
 
 /*dropdown menu*/
 .dropbtn {
+<<<<<<< HEAD
   color: black;
   font-size: 18px;
   border: none;
   cursor: pointer;
   text-decoration: underline;
+=======
+  color: royalblue;
+  padding: 12px;
+  font-size: 1.0em;
+  border: none;
+  cursor: pointer;
+  color: #218838 ;
+>>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -73,7 +98,11 @@ nav ul li a{
 .dropdown-content {
   display: none;
   position: absolute;
+<<<<<<< HEAD
   background-color: blue;
+=======
+  background-color: #4aa2d4;
+>>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
   min-width: 160px;
   overflow: auto;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -106,6 +135,101 @@ nav ul li a{
   width: 40%;
 }
 
+<<<<<<< HEAD
+=======
+/* Register Form */
+.register{
+  padding: 25px;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  border: gray 1px solid;
+  border-radius: 10px;
+}
+
+.reg-head {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 2%;
+}
+
+/* Login form */
+form{
+  margin-left: 8%;
+}
+.log-form{
+  padding: 25px;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  border: gray 1px solid;
+  border-radius: 10px;
+  width: 50%;
+  margin-bottom: 50px;
+}
+.loginForm{
+  margin-left: 150px;
+}
+.log-head{
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 2%;
+}
+
+/*Main Section */
+
+.welcome{
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: bold ;
+  font-family: 'Trirong', serif;
+}
+
+.welcome-2{
+  text-align: center;
+  font-size: 2.0em;
+  font-family: 'Trirong', serif;
+}
+
+#job-seeker{
+  background-color: #218838;
+  font-size: 2.3em;
+  position: relative;
+  margin-left:55%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  color: white;
+}
+
+#job-seeker:hover{
+  background-color: #0069d9;
+}
+
+#employer{
+  background-color: #218838;
+  font-size: 2.3em;
+  position: relative;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  color: white;
+}
+
+#employer:hover{
+  background-color: #0069d9;
+}
+
+.or{
+  font-size: 2.0em;
+  font-weight: bold ;
+  font-family: 'Trirong', serif;
+  margin-left: 35%;
+  margin-top: 8%;
+}
+
+/*posting_section
+------------------*/
+>>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
 .posting_section h3{
   padding: 2%;
   text-align: center;
@@ -244,7 +368,24 @@ footer {
   padding-left: 65px;
   padding-right: 25px;
   padding-bottom: 5px;
-  background-color: #f5f5f5;
+  background-color: #4aa2d4;
+  color: white;
+}
+footer h6{
+  text-decoration: underline;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover{
+  background-color: lightgreen;
+  text-decoration: none;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
 }
 footer nav ul li {
 

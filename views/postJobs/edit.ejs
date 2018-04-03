@@ -1,0 +1,19 @@
+<% include ../shared/header.ejs%>
+<h1>Update Details for Job</h1>
+<form method="post">
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="title">Title*: </label>
+        <input name="title" id="title" value="<%= postjobs.title %>" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="description">Description*: </label>
+        <textarea name="description" id="description" required ><%= postjobs.description %></textarea>
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="requirements">Requirements*: </label>
+        <textarea name="requirements" id="requirements" required ><%= postjobs.requirements %></textarea>
+    </fieldset>
+    <button class="offset-2 btn btn-primary">Save</button>
+</form>
+
+<% include ../shared/footer.ejs%>
