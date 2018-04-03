@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/OnlineJopPortalWebsite-SMWDB.iml" filepath="$PROJECT_DIR$/.idea/OnlineJopPortalWebsite-SMWDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/onlineJobSMDW.iml" filepath="$PROJECT_DIR$/.idea/onlineJobSMDW.iml" />
     </modules>
   </component>
 </project>
