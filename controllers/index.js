@@ -2,7 +2,10 @@ let express = require('express');
 let router = express.Router();
 let passport =require('passport');
 let User = require('../models/user');
+const nodemailer = require('nodemailer');
 let globalFunction =require('../config/globalFunctions');
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -78,4 +81,55 @@ router.get('/logout', (req, res, next)=>{
     res.redirect('/')
 });
 
+//get contact form
+
+router.get('/send', function (req, res, next) {
+    res.render('send')
+});
+
+router.post('/send', function (req, res, next) {
+
+    const sent = `
+      <p>Message From SMWDB Contact form</p>
+      <ul>
+          <ul>Name: ${req.body.name}</ul>
+          <ul>Email: ${req.body.email}</ul>
+      </ul>
+      <h3>Message Detail</h3>
+      <p>${req.body.message}</p>
+    `;
+
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: 'smwdbinfo@gmail.com',
+            pass: '123456Abc' // generated ethereal password
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
+
+    const mailOptions = {
+        from: '<smtp.gmail.com>', // sender address
+        to: 'aulakhsukhwinder2@gmail.com, rajvinderyogi@gmail.com , impankaj.saini.1947@gmail.com', // list of receivers
+        subject: 'SMWDB Job Fair Contact Form', // Subject line
+        text: 'Hello world?', // plain text body
+        html: sent // html body
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: %s', info.messageId);
+        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+
+        res.redirect('contactUs');
+    });
+});
 module.exports = router;
