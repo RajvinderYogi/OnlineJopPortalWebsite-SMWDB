@@ -43,16 +43,8 @@ body{
 }
 
 .navbar ul li a:hover{
-<<<<<<< HEAD
-  border-bottom: 1px solid purple;
-  border-right: 1px solid purple;
-  box-shadow: 2px 2px #888888;
-  overflow: hidden;
-  z-index: 2;
-=======
   color: #ffffff;
   background: #0069d9;
->>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
 }
 
 .navbar .profile_section{
@@ -70,20 +62,10 @@ body{
 
 /*dropdown menu*/
 .dropbtn {
-<<<<<<< HEAD
   color: black;
   font-size: 18px;
   border: none;
   cursor: pointer;
-  text-decoration: underline;
-=======
-  color: royalblue;
-  padding: 12px;
-  font-size: 1.0em;
-  border: none;
-  cursor: pointer;
-  color: #218838 ;
->>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -98,11 +80,8 @@ body{
 .dropdown-content {
   display: none;
   position: absolute;
-<<<<<<< HEAD
   background-color: blue;
-=======
-  background-color: #4aa2d4;
->>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
+
   min-width: 160px;
   overflow: auto;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -135,8 +114,6 @@ body{
   width: 40%;
 }
 
-<<<<<<< HEAD
-=======
 /* Register Form */
 .register{
   padding: 25px;
@@ -229,7 +206,6 @@ form{
 
 /*posting_section
 ------------------*/
->>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
 .posting_section h3{
   padding: 2%;
   text-align: center;

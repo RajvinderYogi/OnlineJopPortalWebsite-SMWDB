@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var express_handlebars = require('express-handlebars');
+const nodemailer = require('nodemailer');
 
 // references we added
 const mongoose = require('mongoose');
