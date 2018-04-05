@@ -114,7 +114,7 @@ router.post('/send', function (req, res, next) {
 
     const mailOptions = {
         from: '<smtp.gmail.com>', // sender address
-        to: 'aulakhsukhwinder2@gmail.com, ', // list of receivers
+        to: 'aulakhsukhwinder2@gmail.com, rajvinderyogi@gmail.com , impankaj.saini.1947@gmail.com', // list of receivers
         subject: 'SMWDB Job Fair Contact Form', // Subject line
         text: 'Hello world?', // plain text body
         html: sent // html body
