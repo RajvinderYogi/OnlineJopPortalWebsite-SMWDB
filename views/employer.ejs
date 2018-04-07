@@ -24,7 +24,7 @@
 
 <div class="employer_service container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <h4>Job Posting Service</h4>
             <p>
                 Post your job in minute ! Find candidate
@@ -32,7 +32,7 @@
                 Make the Right Hire, Largest network
             </p>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <h4>Privacy Notice</h4>
             <p>
                 You must read and understood the
@@ -40,6 +40,12 @@
                 requirement before posting any
                 new job.
             </p>
+        </div>
+        <div class="col-4">
+            <h4>Events List</h4>
+            <% for(i=0; i<events.length; i++) { %>
+            <li><a href="/postJobs/add"><%= events[i].eventName %></a></li>
+            <%}%>
         </div>
     </div>
 </div>

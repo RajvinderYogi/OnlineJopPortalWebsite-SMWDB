@@ -1,7 +1,7 @@
 // refrence mongoose
 const mongoose = require('mongoose');
 
-//create car schema
+//create PostJob schema
 const postJobSchema = new mongoose.Schema({
     title:{
         type: String,
