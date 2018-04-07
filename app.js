@@ -57,9 +57,6 @@ conn.once('open',()=>{
    gfs.collection('uploads');
 
 });
-//create storage engine
-
-
 
 //create storage engine
 
@@ -71,7 +68,7 @@ const storage = new GridFsStorage({
             //crypto.randomBytes is used to generate names
             crypto.randomBytes(16, (err, buf) => {
                 if (err) {
-                    return reject(err);
+                     return reject(err);
                 }
                 const filename = buf.toString('hex') + path.extname(file.originalname);
                 const fileInfo = {
@@ -85,6 +82,69 @@ const storage = new GridFsStorage({
 });
 const upload = multer({storage});
 
+//uploads file to db
+//single is used to upload one file at a time
+app.post('/upload', upload.single('file'), (req, res , next) => {
+    // res.json({ file: req.file});
+    res.redirect('/jobSeeker')
+});
+
+//GET/ files
+//display all the files in JSOn format
+app.get('/files', (req, res , next) => {
+gfs.files.find().toArray((err, files) => {
+//    check if files
+    if(!files || files.length === 0){
+        return res.status(404).json({
+            err: 'No files exist'
+        });
+    }
+
+//    files exist
+    return res.json(files);
+});
+});
+
+//GET/ files/:filename
+//display all the single files object in JSOn format
+app.get('/files/:filename', (req, res , next) => {
+    gfs.files.findOne({filename: req.params.filename}, (err,file) => {
+        if(!file || file.length === 0){
+            return res.status(404).json({
+                err: 'No files exists'
+            });
+        }
+    //    file exist
+        return res.json(file);
+
+    });
+});
+
+//GET/ iamges/:filename
+//display all the files in JSOn format
+app.get('/image/:filename', (req, res , next) => {
+    gfs.files.findOne({filename: req.params.filename}, (err,file) => {
+        if(!file || file.length === 0){
+            return res.status(404).json({
+                err: 'No files exists'
+            });
+        }
+        //check if image
+        if (file.contentType === 'image/jpeg' || file.contentType === 'img/png') {
+ 
+            const readstream = gfs.createReadStream(file.filename);
+            readstream.pipe(res);
+
+        }
+        else
+        {
+            res.status(404).json({
+                err: ' not an image format '
+            });
+        }
+
+    });
+});
 
 
 
@@ -135,12 +195,6 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-//uploads file to db
-//single is used to upload one file at a time
-app.post('/upload', upload.single('file'), (req, res) => {
-    res.json({ file: req.file});
-
-});
 
 
 module.exports = app;
