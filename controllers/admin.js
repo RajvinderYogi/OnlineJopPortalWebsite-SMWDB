@@ -55,11 +55,13 @@ router.post('/addEvent',globalFunction.userLoggedIn, (req, res, next)=>{
             console.log(err);
         }
         else {
-            res.redirect('/admin/eventList')
+            res.redirect('/events')
         }
     });
 });
-//GET: /postJobs
+
+
+//GET: /events
 router.get('/eventList', globalFunction.userLoggedIn, (req, res, next) => {
     //get car document from db
     Event.find((err,events)=>{
@@ -72,6 +74,20 @@ router.get('/eventList', globalFunction.userLoggedIn, (req, res, next) => {
                 events:events,
                 user: req.user
             });
+        }
+    });
+});
+
+//GET: /Delete
+router.get('/delete/:_id', globalFunction.userLoggedIn, (req, res, next) =>{
+    let _id= req.params._id;
+
+    Event.remove({_id: _id}, (err) =>{
+        if(err){
+            console.log(err);
+        }
+        else {
+            res.redirect('/eventList');
         }
     });
 });

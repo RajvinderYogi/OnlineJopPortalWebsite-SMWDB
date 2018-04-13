@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 
 //create PostJob schema
 const postJobSchema = new mongoose.Schema({
+    event:{
+      type:String
+    },
     title:{
         type: String,
         required:'title is required'

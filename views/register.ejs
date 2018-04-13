@@ -13,36 +13,73 @@
                         </select>
                     </fieldset>
                     <fieldset class="form-group" id="ifJobSeekerFName" style="display:none;">
-                        <label class="control-label col-md-2" for="fName">First Name</label>
+                        <label class="control-label col-md-2" for="fName">First Name*</label>
                         <input type="text" placeholder="First Name" name="fName" id="fName" >
                     </fieldset>
                     <fieldset class="form-group" id="ifJobSeekerLName" style="display:none;">
-                        <label class="control-label col-md-2" for="lName">Last Name</label>
+                        <label class="control-label col-md-2" for="lName">Last Name*</label>
                         <input type="text" placeholder="Last Name" name="lName" id="lName" >
                     </fieldset>
                     <fieldset class="form-group" id="ifEmployerCName" style="display:none;">
-                        <label class="control-label col-md-2" for="cName">Company Name</label>
+                        <label class="control-label col-md-2" for="cName">Company Name*</label>
                         <input type="text" placeholder="Company Name" name="cName" id="cName" >
                     </fieldset>
                     <fieldset class="form-group" id="ifEmployerCPerson" style="display:none;">
-                        <label class="control-label col-md-2" for="cPerson">Contact Person</label>
+                        <label class="control-label col-md-2" for="cPerson">Contact Person*</label>
                         <input type="text" placeholder="Contact Person" name="cPerson" id="cPerson" >
                     </fieldset>
                     <fieldset class="form-group">
-                        <label class="control-label col-md-2" for="username">Email</label>
+                        <label class="control-label col-md-2" for="username">Email*</label>
                         <input type="email" placeholder="Email" name="username" id="username" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <label class="control-label col-md-2" for="password">Password</label>
+                        <label class="control-label col-md-2" for="password">Password*</label>
                         <input type="password" placeholder="Password" name="password" id="password" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <label class="control-label col-md-2" for="confirmPassword">Confirm Password</label>
+                        <label class="control-label col-md-2" for="confirmPassword">Confirm Password*</label>
                         <input type="password" placeholder="Password" name="confirmPassword" id="confirmPassword" required>
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerCity" style="display:none;">
+                        <label class="control-label col-md-2" for="city">City/Town*</label>
+                        <input type="text" placeholder="City" name="city" id="city" >
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerProvince" style="display:none;">
+                        <label class="control-label col-md-2" for="province">Province*</label>
+                        <input type="text" placeholder="Province" name="province" id="province" >
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerPCode" style="display:none;">
+                        <label class="control-label col-md-2" for="pCode">Postal Code*</label>
+                        <input type="text" placeholder="Postal Code" name="pCode" id="pCode" >
                     </fieldset>
                     <fieldset class="form-group">
                         <label class="control-label col-md-2" for="phoneNo">Phone Number</label>
                         <input type="tel" placeholder="Phone Number" name="phoneNo" id="phoneNo">
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerAGroup" style="display:none;">
+                        <label class="control-label col-md-2" for="AGroup">Age Group</label>
+                        <select name="AGroup" id="AGroup">
+                            <option disabled selected>Choose...</option>
+                            <option>18-24</option>
+                            <option>25-29</option>
+                            <option>30-34</option>
+                            <option>35-44</option>
+                            <option>45-55</option>
+                            <option>56-64</option>
+                            <option>65+</option>
+                        </select>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="form-group" id="ifJobSeekerEdu" style="display:none;">
+                        <label class="control-label col-md-6" for="education"><strong>What is your level of training/education completed?</strong></label>
+                        <select type="radio" name="education" id="education" >
+                            <option disabled selected>Choose...</option>
+                            <option>Some High School</option>
+                            <option>Completed High School</option>
+                            <option>Some College/University</option>
+                            <option>Completed College/University</option>
+                            <option>Apprenticeship, Trades, Certificate, or Diploma</option>
+                        </select>
                     </fieldset>
                     <!--<fieldset class="form-group">-->
                     <!--<label class="control-label col-md-2" for="resume">Resume</label>-->

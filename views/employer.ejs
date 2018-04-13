@@ -41,11 +41,21 @@
                 new job.
             </p>
         </div>
+
         <div class="col-4">
             <h4>Events List</h4>
+            <%if (user){%>
             <% for(i=0; i<events.length; i++) { %>
-            <li><a href="/postJobs/add"><%= events[i].eventName %></a></li>
+            <li><p class="col-6"><%= events[i].eventName %></p>
+                <%if (user.userType === 'employer'){%>
+                <a class="col-6" href="/postJobs/add">Post Job</a></li>
             <%}%>
+            <%}%>
+            <%}
+            else{%>
+            <p>Please <a href="login">Login</a> to see the events </p>
+            <%}%>
+
         </div>
     </div>
 </div>

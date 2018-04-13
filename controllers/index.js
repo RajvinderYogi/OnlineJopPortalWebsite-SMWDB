@@ -52,7 +52,12 @@ router.post('/register', function (req, res, next) {
             cPerson:req.body.cPerson,
             userType: req.body.userType,
             username: req.body.username,
-            phoneNo: req.body.phoneNo
+            phoneNo: req.body.phoneNo,
+            province: req.body.province,
+            city: req.body.city,
+            pCode: req.body.pCode,
+            AGroup: req.body.AGroup,
+            education: req.body.education,
         }),
         req.body.password,
         function(err, user) {

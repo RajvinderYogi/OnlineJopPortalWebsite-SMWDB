@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const PostJob = require('../models/postJob');
+let Event = require('../models/event');
 let globalFunction =require('../config/globalFunctions')
 
 //GET: /postJobs
@@ -22,9 +23,17 @@ router.get('/', globalFunction.userLoggedIn, (req, res, next) => {
 
 //GET /postJobs/add
 router.get('/add', globalFunction.userLoggedIn, (req, res, next)=>{
-    res.render('postJobs/add', {
-        title:'Add a New Job here',
-        user: req.user
+    Event.find((err,events)=> {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render('postJobs/add', {
+                title: 'Add a New Job here',
+                events: events,
+                user: req.user
+            });
+        }
     });
 });
 
@@ -32,6 +41,7 @@ router.get('/add', globalFunction.userLoggedIn, (req, res, next)=>{
 router.post('/add',globalFunction.userLoggedIn, (req, res, next)=>{
     //use car model to save thee car
     PostJob.create({
+        event:req.body.title,
         title: req.body.title,
         description:req.body.description,
         requirements:req.body.requirements

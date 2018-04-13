@@ -1,15 +1,16 @@
 
 <% include ../shared/header.ejs %>
 <%if (user.userType == "admin"){%>
-<h1>Events List</h1>
 <table class="table table-striped table-hover">
     <tr>
-        <th>Events</th>
+        <th>Event</th>
+        <th>Delete</th>
     </tr>
     <% for(i=0; i<events.length; i++) { %>
-    <tr>
-        <td><%= i %></td>
+    <tr >
         <td><%= events[i].eventName %></td>
+        <td>
+            <a href="/events/delete/<%= events[i]._id%>" class="btn btn-danger col-md-3" onclick="return confirm('Are you sure want to delete this Event?')"> Delete Event</a></td>
     </tr>
     <%}%>
 </table>
