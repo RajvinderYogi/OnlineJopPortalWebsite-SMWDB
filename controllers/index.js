@@ -2,7 +2,10 @@ let express = require('express');
 let router = express.Router();
 let passport =require('passport');
 let User = require('../models/user');
+let Event = require('../models/event');
+
 const nodemailer = require('nodemailer');
+
 let globalFunction =require('../config/globalFunctions');
 
 
@@ -15,7 +18,20 @@ router.get('/jobSeeker', function(req, res, next) {
     res.render('jobSeeker', { title: 'SMWDB - Job Seeker', user: req.user });
 });
 router.get('/employer', function(req, res, next) {
-    res.render('employer', { title: 'SMWDB - Employers', user: req.user  });
+//     res.render('employer', { title: 'SMWDB - Employers', user: req.user, events:events  });
+// });
+    Event.find((err,events)=>{
+        if (err){
+            console.log(err);
+        }
+        else {
+            res.render('employer', {
+                title:"SMWDB - Employer",
+                events:events,
+                user: req.user
+            });
+        }
+    });
 });
 router.get('/help', function(req, res, next) {
     res.render('help', { title: 'SMWDB - Contact Us',user: req.user });
@@ -41,7 +57,12 @@ router.post('/register', function (req, res, next) {
             cPerson:req.body.cPerson,
             userType: req.body.userType,
             username: req.body.username,
-            phoneNo: req.body.phoneNo
+            phoneNo: req.body.phoneNo,
+            province: req.body.province,
+            city: req.body.city,
+            pCode: req.body.pCode,
+            AGroup: req.body.AGroup,
+            education: req.body.education,
         }),
         req.body.password,
         function(err, user) {

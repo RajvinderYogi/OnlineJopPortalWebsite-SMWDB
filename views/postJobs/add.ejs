@@ -1,6 +1,16 @@
 <% include ../shared/header.ejs%>
 <h1>Add Details for Job</h1>
+
 <form action="../postJobs/add" method="post">
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="userType">Event</label>
+        <select placeholder="choose.." name="userType" id="userType" required>
+            <option disabled selected>Choose...</option>
+            <% for(i=0; i<events.length; i++) { %>
+            <option ><%= events[i].eventName %></option>
+            <%}%>
+        </select>
+    </fieldset>
     <fieldset class="form-group">
         <label class="control-label col-md-2" for="title">Title*: </label>
         <input name="title" id="title" required />
