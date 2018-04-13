@@ -47,13 +47,11 @@ body{
   background: #0069d9;
 }
 
-
-
 .navbar .profile_section{
   position: relative;
   padding: 5px;
-  top: -80px;
-  right: 25px;
+  top: -50px;
+  right: 55px;
 
 }
 .profile_section .btn{
@@ -64,12 +62,10 @@ body{
 
 /*dropdown menu*/
 .dropbtn {
-  color: royalblue;
-  padding: 12px;
-  font-size: 1.0em;
+  color: black;
+  font-size: 18px;
   border: none;
   cursor: pointer;
-  color: #218838 ;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -78,16 +74,17 @@ body{
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #4aa2d4;
+  background-color: blue;
+
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
 }
 
@@ -102,12 +99,12 @@ body{
 
 .show {display:block;}
 
-/*Slider section
------------------------*/
+/*Home Page======
+==================*/
 
 .slider_section{
   width:100%;
-  padding: 2.5%;
+  padding-bottom: 50px;
   background: gainsboro;
   display: block;
   text-align: center;
@@ -212,14 +209,20 @@ form{
 .posting_section h3{
   padding: 2%;
   text-align: center;
-  color: khaki;
+  color: royalblue;
+}
+
+.ad_section{
+  text-align: center;
 }
 .ad_section img{
   width: 60%;
 }
 
-/*======================================career page
-===================================================*/
+
+
+/*Job Seeker =====
+=================*/
 
 .career_section h3{
   padding: 5px;
@@ -241,20 +244,23 @@ form{
 
 .employer_slider {
   width:100%;
-  padding: 2.5%;
+  padding: 60px;
   background: gainsboro;
   display: block;
   text-align: center;
 }
 
 .employer_slider img{
-  width:40%;
+  width: 50%;
 }
 
+.employer_text{
+  position: relative;
+  top: 35px;
+}
 .employer_service{
-  padding: 25px;
+  padding: 55px;
 }
-
 
 .employer_choice{
   width: 100%;
@@ -281,7 +287,13 @@ form{
 .help .row h6{
   text-align: justify;
 }
-
+.faq h6{
+  padding: 10px;
+  background: grey;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .resume_help{
   padding: 10px;
 }
@@ -316,11 +328,20 @@ form{
   width: 20%;
   border-radius: 100px;
 }
+
+
+/*Login Page =
+===============*/
+
+.alert{
+  border-radius: 15px;
+  padding: 20px;
+}
 /*footer section
 -------------------*/
 footer {
   padding-top: 25px;
-  padding-left: 25px;
+  padding-left: 65px;
   padding-right: 25px;
   padding-bottom: 5px;
   background-color: #4aa2d4;
@@ -355,7 +376,21 @@ footer p{
   text-align: center;
 }
 
+.fa-facebook{
+  font-size: 35px;
+}
 
+.fa-twitter{
+  font-size: 35px;
+}
+
+.fa-instagram{
+  font-size: 35px;
+}
+
+.fa-linkedin{
+  font-size: 35px;
+}
 /*Mobile format
 -----------------------*/
 

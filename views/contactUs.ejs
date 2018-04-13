@@ -18,20 +18,21 @@
         <!--Contact form-->
         <div class="contact_form col-8">
             <p>We are here to help you if have any question send your message we will get you soon</p>
-            <form>
+
+            <form method="post" action="/send">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input class="form-control" id="name" type="text" placeholder="Enter Your Name" required>
+                    <input class="col-md-8 form-control" id="name" type="text" name="name" placeholder="Enter Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <Input class="form-control" id="Email" type="email" placeholder="Enter Your Email" required>
+                    <Input class="col-md-8 form-control" id="Email" type="email" name="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea class="form-control" id="message"></textarea>
+                    <textarea class="col-md-8 form-control" name="message" id="message"></textarea>
                 </div>
-                <button class="btn btn-primary">Send</button>
+                <button class="btn btn-primary" type="submit">Send</button>
             </form>
         </div>
         <!--Company senior Officer-->
