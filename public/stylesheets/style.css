@@ -1,10 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Trirong');
+@import url('https://fonts.googleapis.com/css?family=Lustria');
+@import url('https://fonts.googleapis.com/css?family=Marvel');
 /*header section*/
 
 /*body*/
 body{
-  font-family: 'Rubik', 'Open Sans', sans-serif;
+  font-family: 'Lustria', serif;
 }
 
 /*header scetion*/
@@ -229,6 +231,20 @@ form{
 .career_info h5{
   padding: 5px;
   text-align: center;
+  font-weight: bolder;
+}
+
+.career_info h4{
+  border: black solid 1px;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.8em;
+  background-color: #218838;
+  color: white;
+}
+
+.career_info .col-4{
+  border: black 1px solid;
 }
 
 
@@ -328,11 +344,14 @@ footer {
 }
 footer h6{
   text-decoration: underline;
+  font-size: 1.2em;
 }
 
 footer a {
   color: white;
   text-decoration: none;
+  font-family: 'Marvel', sans-serif;
+  font-size: 1.2em;
 }
 
 footer a:hover{
@@ -340,7 +359,7 @@ footer a:hover{
   text-decoration: none;
   color: white;
   padding: 2px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 footer nav ul li {
 
