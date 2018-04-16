@@ -3,12 +3,14 @@
 <h1>Job Seekers</h1>
 <table class="table table-striped table-hover">
     <tr>
+        <th>Number</th>
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
     </tr>
     <% for(i=0; i<jobseeker.length; i++) { %>
     <tr>
+        <td><%= i %></td>
         <td><%= jobseeker[i].username %></td>
         <td><%= jobseeker[i].fName %></td>
         <td><%= jobseeker[i].lName %></td>

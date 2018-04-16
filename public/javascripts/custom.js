@@ -17,10 +17,20 @@ function EmpOrJob(that) {
     if (that.value == "jobseeker") {
         document.getElementById("ifJobSeekerFName").style.display = "block";
         document.getElementById("ifJobSeekerLName").style.display = "block";
+        document.getElementById("ifJobSeekerPCode").style.display = "block";
+        document.getElementById("ifJobSeekerProvince").style.display = "block";
+        document.getElementById("ifJobSeekerCity").style.display = "block";
+        document.getElementById("ifJobSeekerAGroup").style.display = "block";
+        document.getElementById("ifJobSeekerEdu").style.display = "block";
     }
     else {
         document.getElementById("ifJobSeekerFName").style.display = "none";
         document.getElementById("ifJobSeekerLName").style.display = "none";
+        document.getElementById("ifJobSeekerPCode").style.display = "none";
+        document.getElementById("ifJobSeekerProvince").style.display = "none";
+        document.getElementById("ifJobSeekerCity").style.display = "none";
+        document.getElementById("ifJobSeekerAGroup").style.display = "none";
+        document.getElementById("ifJobSeekerEdu").style.display = "none";
     }
 }
 
