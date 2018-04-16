@@ -1,54 +1,53 @@
 <% include ../shared/header.ejs %>
+<%if (user.userType == "jobseeker"){%>
+<div class="container">
+<h1 class="jobseekerhead"><%= user.fName%> <%= user.lName%>'s Details</h1>
+<table class="table table-striped table-hover table-bordered">
+    <caption>Personal Information</caption>
+    <tr>
+        <td>Email</td>
+        <td><%= user.username %></td>
+    </tr>
+    <tr>
+        <td>First Name:</td>
+        <td><%= user.fName %></td>
+    </tr>
+    <tr>
+        <td>Last Name:</td>
+        <td><%= user.lName %></td>
+    </tr>
+    <tr>
+        <td>Contact number:</td>
+        <td><%= user.phoneNo %></td>
+    </tr>
 
-<div class="seeker_detail container">
-    <%if (user.userType == "jobseeker"){%>
-    <h1>Job Seeker Details</h1>
+</table>
 
-    <table class="table table-striped table-hover">
-        <tr>
-            <td>Email</td>
-            <td><%= user.username %></td>
-        </tr>
-        <tr>
-            <td>First Name:</td>
-            <td><%= user.fName %></td>
-        </tr>
-        <tr>
-            <td>Last Name:</td>
-            <td><%= user.lName %></td>
-        </tr>
-        <tr>
-            <td>Contact number:</td>
-            <td><%= user.phoneNo %></td>
-        </tr>
+<%}%>
+<%if(user.userType == "employer"){%>
+<h1 class="jobseekerhead"><%= user.cName %>'s Details</h1>
+<table class="table table-striped table-hover">
+    <tr>
+        <td>Email</td>
+        <td><%= user.username %></td>
+    </tr>
+    <tr>
+        <td>Company Name:</td>
+        <td><%= user.cName%></td>
+    </tr>
+    <tr>
+        <td>Contact Person</td>
+        <td><%= user.cPerson %></td>
+    </tr>
+    <tr>
+        <td>Contact number:</td>
+        <td><%= user.phoneNo %></td>
+    </tr>
 
-    </table>
-    <%}%>
-    <%if(user.userType == "employer"){%>
-
-    <h1>Employer Details</h1>
-
-    <table class="table table-striped table-hover">
-        <tr>
-            <td>Email</td>
-            <td><%= user.username %></td>
-        </tr>
-        <tr>
-            <td>Company Name:</td>
-            <td><%= user.cName%></td>
-        </tr>
-        <tr>
-            <td>Contact Person</td>
-            <td><%= user.cPerson %></td>
-        </tr>
-        <tr>
-            <td>Contact number:</td>
-            <td><%= user.phoneNo %></td>
-        </tr>
-
-    </table>
-    <%}%>
-    <a href="../jobSeekers/edit/<%= user._id%>" class="btn btn-primary">Edit</a><hr>
+</table>
+<%}%>
+<a href="../jobSeekers/edit/<%= user._id%>" class="btn col-md-3">Update Information</a>
+    <hr>
 </div>
-
 <% include ../shared/footer.ejs %>
+
