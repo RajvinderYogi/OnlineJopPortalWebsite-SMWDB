@@ -38,10 +38,11 @@
                 </li>
             </ul>
 
-            <div class="justify-content-end">
-                <%if (!user){%>
-                <a href="/register" class="btn btn-primary">Register</a>
-                <a href="/login" class="btn btn-success">Login</a><%}
+            <div class="action">
+                <%if (!user){%><a href="/register" class="btn btn-primary">REGISTER</a>
+                <a href="/login" class="btn btn-success">LOGIN</a><%}
+
+
                 else{%>
                 <%if (user.userType === "admin"){%>
                 <a href="/admin/">Go To Dashboard</a>

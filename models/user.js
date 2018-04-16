@@ -6,7 +6,6 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const userSchema = new mongoose.Schema({
     fName:{
         type: String,
-
     },
     lName:{
         type: String,
@@ -18,9 +17,24 @@ const userSchema = new mongoose.Schema({
         type: String
     },
     phoneNo:{
-        type: Number,
+        type: Number
     },
     userType:{
+        type: String
+    },
+    province:{
+        type:String
+    },
+    city:{
+        type: String
+    },
+    pCode:{
+        type: String
+    },
+    AGroup:{
+        type: String
+    },
+    education:{
         type: String
     }
 });

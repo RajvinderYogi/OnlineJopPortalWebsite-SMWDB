@@ -25,7 +25,7 @@ const index = require('./controllers/index');
 const jsd = require('./controllers/jobSeekerDetails');
 const postJobs = require('./controllers/postJobs');
 const Admin = require('./controllers/admin');
-
+const Event = require('./controllers/events');
 
 const app = express();
 
@@ -175,7 +175,7 @@ app.use('/', index);
 app.use('/jobSeekers', jsd);
 app.use('/postJobs', postJobs);
 app.use('/admin', Admin);
-
+app.use('/events', Event);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
