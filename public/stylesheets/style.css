@@ -49,11 +49,13 @@ body{
   background: #0069d9;
 }
 
+
+
 .navbar .profile_section{
   position: relative;
   padding: 5px;
-  top: -50px;
-  right: 55px;
+  top: -80px;
+  right: 25px;
 
 }
 .profile_section .btn{
@@ -64,10 +66,12 @@ body{
 
 /*dropdown menu*/
 .dropbtn {
-  color: black;
-  font-size: 18px;
+  color: royalblue;
+  padding: 12px;
+  font-size: 1.0em;
   border: none;
   cursor: pointer;
+  color: #218838 ;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -76,17 +80,16 @@ body{
 
 .dropdown {
   position: relative;
-  display: block;
+  display: inline-block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: blue;
-
+  background-color: #4aa2d4;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
@@ -101,12 +104,12 @@ body{
 
 .show {display:block;}
 
-/*Home Page======
-==================*/
+/*Slider section
+-----------------------*/
 
 .slider_section{
   width:100%;
-  padding-bottom: 50px;
+  padding: 2.5%;
   background: gainsboro;
   display: block;
   text-align: center;
@@ -114,6 +117,128 @@ body{
 
 .slider_section img{
   width: 40%;
+}
+
+/* Logo Slider */
+h2{
+  text-align:center;
+  padding: 20px;
+}
+/* Slider */
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slider
+{
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus
+{
+  outline: none;
+}
+.slick-list.dragging
+{
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+  display: table;
+  content: '';
+}
+.slick-track:after
+{
+  clear: both;
+}
+.slick-loading .slick-track
+{
+  visibility: hidden;
+}
+
+.slick-slide
+{
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+  float: right;
+}
+.slick-slide img
+{
+  display: block;
+}
+.slick-slide.slick-loading img
+{
+  display: none;
+}
+.slick-slide.dragging img
+{
+  pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+  display: block;
+}
+.slick-loading .slick-slide
+{
+  visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
 }
 
 /* Register Form */
@@ -211,20 +336,20 @@ form{
 .posting_section h3{
   padding: 2%;
   text-align: center;
-  color: royalblue;
-}
-
-.ad_section{
-  text-align: center;
+  color: khaki;
 }
 .ad_section img{
   width: 60%;
 }
 
-
-
-/*Job Seeker =====
-=================*/
+/* Job Seeker Info */
+.jobseekerhead{
+  text-align: center;
+  padding: 25px;
+  font-size: 2.5em;
+}
+/*======================================career page
+===================================================*/
 
 .career_section h3{
   padding: 5px;
@@ -260,23 +385,20 @@ form{
 
 .employer_slider {
   width:100%;
-  padding: 60px;
+  padding: 2.5%;
   background: gainsboro;
   display: block;
   text-align: center;
 }
 
 .employer_slider img{
-  width: 50%;
+  width:40%;
 }
 
-.employer_text{
-  position: relative;
-  top: 35px;
-}
 .employer_service{
-  padding: 55px;
+  padding: 25px;
 }
+
 
 .employer_choice{
   width: 100%;
@@ -303,13 +425,7 @@ form{
 .help .row h6{
   text-align: justify;
 }
-.faq h6{
-  padding: 10px;
-  background: grey;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 .resume_help{
   padding: 10px;
 }
@@ -344,20 +460,11 @@ form{
   width: 20%;
   border-radius: 100px;
 }
-
-
-/*Login Page =
-===============*/
-
-.alert{
-  border-radius: 15px;
-  padding: 20px;
-}
 /*footer section
 -------------------*/
 footer {
   padding-top: 25px;
-  padding-left: 65px;
+  padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 5px;
   background-color: #4aa2d4;
@@ -395,21 +502,7 @@ footer p{
   text-align: center;
 }
 
-.fa-facebook{
-  font-size: 35px;
-}
 
-.fa-twitter{
-  font-size: 35px;
-}
-
-.fa-instagram{
-  font-size: 35px;
-}
-
-.fa-linkedin{
-  font-size: 35px;
-}
 /*Mobile format
 -----------------------*/
 

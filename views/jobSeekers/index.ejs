@@ -1,62 +1,9 @@
 <% include ../shared/header.ejs %>
-<<<<<<< HEAD
-
-<div class="seeker_detail container">
-    <%if (user.userType == "jobseeker"){%>
-    <h1>Job Seeker Details</h1>
-
-    <table class="table table-striped table-hover">
-        <tr>
-            <td>Email</td>
-            <td><%= user.username %></td>
-        </tr>
-        <tr>
-            <td>First Name:</td>
-            <td><%= user.fName %></td>
-        </tr>
-        <tr>
-            <td>Last Name:</td>
-            <td><%= user.lName %></td>
-        </tr>
-        <tr>
-            <td>Contact number:</td>
-            <td><%= user.phoneNo %></td>
-        </tr>
-
-    </table>
-    <%}%>
-    <%if(user.userType == "employer"){%>
-
-    <h1>Employer Details</h1>
-
-    <table class="table table-striped table-hover">
-        <tr>
-            <td>Email</td>
-            <td><%= user.username %></td>
-        </tr>
-        <tr>
-            <td>Company Name:</td>
-            <td><%= user.cName%></td>
-        </tr>
-        <tr>
-            <td>Contact Person</td>
-            <td><%= user.cPerson %></td>
-        </tr>
-        <tr>
-            <td>Contact number:</td>
-            <td><%= user.phoneNo %></td>
-        </tr>
-
-    </table>
-    <%}%>
-    <a href="../jobSeekers/edit/<%= user._id%>" class="btn btn-primary">Edit</a><hr>
-</div>
-
-
-=======
 <%if (user.userType == "jobseeker"){%>
-<h1>Job Seeker Details</h1>
-<table class="table table-striped table-hover">
+<div class="container">
+<h1 class="jobseekerhead"><%= user.fName%> <%= user.lName%>'s Details</h1>
+<table class="table table-striped table-hover table-bordered">
+    <caption>Personal Information</caption>
     <tr>
         <td>Email</td>
         <td><%= user.username %></td>
@@ -75,9 +22,10 @@
     </tr>
 
 </table>
+
 <%}%>
 <%if(user.userType == "employer"){%>
-<h1>Employer Details</h1>
+<h1 class="jobseekerhead"><%= user.cName %>'s Details</h1>
 <table class="table table-striped table-hover">
     <tr>
         <td>Email</td>
@@ -98,6 +46,7 @@
 
 </table>
 <%}%>
-<a href="../jobSeekers/edit/<%= user._id%>" class="btn btn-primary col-md-2">Edit</a>
->>>>>>> a3247dd4ff110e2e12b3551ddaf770a6bd713be3
+<a href="../jobSeekers/edit/<%= user._id%>" class="btn btn-primary col-md-3 justify-content-end">Update Information</a>
+    <hr>
+</div>
 <% include ../shared/footer.ejs %>
