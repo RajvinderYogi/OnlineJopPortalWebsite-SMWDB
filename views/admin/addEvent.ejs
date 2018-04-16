@@ -1,0 +1,17 @@
+
+<% include ../shared/header.ejs %>
+<%if (user.userType == "admin"){%>
+<h1>Dashboard</h1>
+<h5><a href="../events">See All the events</a></h5>
+<div>
+    <form action="" method="post">
+        <label id="eventName" for="eventName">Create events here</label>
+        <input type="text" name="eventName" required>
+        <button type="submit">Create</button>
+    </form>
+</div>
+<%}
+else{%>
+<h1> Sorry You do not have Permission to access this page.</h1>
+<%}%>
+<% include ../shared/footer.ejs %>

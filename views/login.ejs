@@ -1,28 +1,29 @@
 <% include shared/header.ejs%>
 <div class="container log-form">
-<h2 class="log-head">Account Login</h2>
-<%if (messages.length > 0) {%>
-<div class="alert-danger"><p><%= messages %></p></div>
-<%}
-else {%>
+    <h2 class="log-head">Account Login</h2>
+    <%if (messages.length > 0) {%>
+    <div class="alert-danger"><p><%= messages %></p></div>
+    <%}
+    else {%>
     <div class="row">
 
-<%}%>
-    <!--<div class="col-4"></div>-->
-<form class="col-10 loginForm" method="post">
-    <div class="alert-info col-8"><p>Please Enter Email and Password.</p></div>
-    <fieldset class="form-group">
-        <label class="control-label col-md-2" for="username">Email</label>
-        <input type="email" id="username" name="username" placeholder="Email">
-    </fieldset>
-    <fieldset class="form-group">
-        <label class="control-label col-md-2" for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Password">
-    </fieldset>
-    <button type="submit" class="offset-2 btn btn-primary col-3">Submit</button>
-    <hr />
-    <p>Create a new Account! <a href="/register" title="Register">Register</a><p>
-</form>
+        <%}%>
+        <!--<div class="col-4"></div>-->
+        <form class="col-10 loginForm" method="post">
+            <div class="alert-info col-8"><p>Please Enter Email and Password.</p></div>
+            <fieldset class="form-group">
+                <label class="control-label col-md-2" for="username">Email</label>
+                <input type="email" id="username" name="username" placeholder="Email">
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="control-label col-md-2" for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </fieldset>
+            <button type="submit" class="offset-2 btn btn-primary col-3">Submit</button>
+            <hr />
+            <p>Create a new Account! <a href="/register" title="Register">Register</a><p>
+        </form>
+
     </div>
 </div>
 

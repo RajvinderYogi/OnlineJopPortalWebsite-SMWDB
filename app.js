@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var express_handlebars = require('express-handlebars');
+const nodemailer = require('nodemailer');
 
 // references we added
 const mongoose = require('mongoose');
@@ -16,7 +18,8 @@ const localStrategy = require('passport-local').Strategy;
 var index = require('./controllers/index');
 const jsd = require('./controllers/jobSeekerDetails');
 const postJobs = require('./controllers/postJobs');
-
+const Admin = require('./controllers/admin');
+const Event = require('./controllers/events');
 
 var app = express();
 
@@ -58,6 +61,8 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', index);
 app.use('/jobSeekers', jsd);
 app.use('/postJobs', postJobs);
+app.use('/admin', Admin);
+app.use('/events', Event);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
