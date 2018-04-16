@@ -1,7 +1,9 @@
 <% include ../shared/header.ejs %>
 <%if (user.userType == "jobseeker"){%>
-<h1>Job Seeker Details</h1>
-<table class="table table-striped table-hover">
+<div class="container">
+<h1 class="jobseekerhead"><%= user.fName%> <%= user.lName%>'s Details</h1>
+<table class="table table-striped table-hover table-bordered">
+    <caption>Personal Information</caption>
     <tr>
         <td>Email</td>
         <td><%= user.username %></td>
@@ -20,9 +22,10 @@
     </tr>
 
 </table>
+
 <%}%>
 <%if(user.userType == "employer"){%>
-<h1>Employer Details</h1>
+<h1 class="jobseekerhead"><%= user.cName %>'s Details</h1>
 <table class="table table-striped table-hover">
     <tr>
         <td>Email</td>
@@ -43,5 +46,7 @@
 
 </table>
 <%}%>
-<a href="../jobSeekers/edit/<%= user._id%>" class="btn btn-primary col-md-2">Edit</a>
+<a href="../jobSeekers/edit/<%= user._id%>" class="btn btn-primary col-md-3 justify-content-end">Update Information</a>
+    <hr>
+</div>
 <% include ../shared/footer.ejs %>
