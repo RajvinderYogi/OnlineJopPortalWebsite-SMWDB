@@ -28,8 +28,24 @@
                     You can also find a number of job resource and career advice to find a new jobs and we will tell you what sort of top three problems everybody do when they are applying for new jobs. Here you can also find best  tools for interview prepartion, new resume, latest news related to jobs and career quizs quizzes and tips how to make crticial decision during
                     tough time
                 </p>
-                <!--Career Advice -->
+                <hr>
+                <div>
+                    <h1 class="text-center display-4 my-4">
+                        Please upload your Resume
+                    </h1>
 
+                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file mb-3">
+                            <input type="file" name="file" id="file" class="custom-file-input">
+                            <label for="file" class="custom-file-label">choose file</label>
+                        </div>
+                        <input type="submit" value="Submit" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+
+                <hr>
+                <!--Career Advice -->
+                <div class="my-4 ">
                 <h5>Career Advice</h5>
                 <div class="row">
                     <!--Most viewed -->
@@ -54,6 +70,7 @@
                         <p>American IT technician company looking for new employee -specially recent graduate. Expert in
                             time management, good communication skills. Click here to apply for this job.</p>
                     </div>
+                </div>
                 </div>
             </div>
 
