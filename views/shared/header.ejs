@@ -40,17 +40,18 @@
             <div class="action">
                 <%if (!user){%><a href="/register" class="btn btn-primary">REGISTER</a>
                 <a href="/login" class="btn btn-success">LOGIN</a><%}
-
                 else{%>
+                <%if (user.userType === "admin"){%>
+                <a href="/admin/">Go To Dashboard</a>
+                <%}%>
+            <div class="dropdown">
+                    <a onclick="myFunction()" href="#" class="dropbtn"><%= user.username%></a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/jobSeekers/">Profile</a>
+                        <a href="/logout">Logout</a>
+                    </div>
+                </div>
 
-
-        <div class="dropdown">
-            <a onclick="myFunction()" href="#" class="dropbtn"><%= user.username%></a>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="/jobSeekers/">Profile</a>
-                <a href="/logout">Logout</a>
-            </div>
-        </div>
             </div>
            <%}%>
     </div>
