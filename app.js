@@ -42,8 +42,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
+
+//mongofile upload starts
 //mongo uri
-const mongoURI = 'mongodb://jaspreet:jaspreet@ds237379.mlab.com:37379/mongofileupload';
+const mongoURI = 'mongodb://raj:zaq12wsx@ds153521.mlab.com:53521/smwdbjobportal';
 
 //create mongo connection
 const conn = mongoose.createConnection(mongoURI);
@@ -68,7 +70,7 @@ const storage = new GridFsStorage({
             //crypto.randomBytes is used to generate names
             crypto.randomBytes(16, (err, buf) => {
                 if (err) {
-                     return reject(err);
+                    return reject(err);
                 }
                 const filename = buf.toString('hex') + path.extname(file.originalname);
                 const fileInfo = {
@@ -80,8 +82,31 @@ const storage = new GridFsStorage({
         });
     }
 });
-const upload = multer({storage});
 
+const upload = multer({storage});
+//
+app.get('/jobSeeker', (req,res,next)=> {
+
+    gfs.files.find().toArray((err, files) => {
+        if (!files || files.length === 0) {
+            res.render('jobSeeker', { title: 'SMWDB - Job Seeker', user: req.user, files: false});
+        }
+        else {
+            files.map(file => {
+                if (file.contentType === 'image/jpeg' || file.contentType === 'image/png') {
+                    file.isImage = true;
+
+                }
+                else {
+                    file.isImage = false;
+                }
+
+
+            });
+            res.render('jobSeeker', { title: 'SMWDB - Job Seeker', user: req.user, files: files });
+        }
+    });
+});
 //uploads file to db
 //single is used to upload one file at a time
 app.post('/upload', upload.single('file'), (req, res , next) => {
@@ -92,17 +117,17 @@ app.post('/upload', upload.single('file'), (req, res , next) => {
 //GET/ files
 //display all the files in JSOn format
 app.get('/files', (req, res , next) => {
-gfs.files.find().toArray((err, files) => {
+    gfs.files.find().toArray((err, files) => {
 //    check if files
-    if(!files || files.length === 0){
-        return res.status(404).json({
-            err: 'No files exist'
-        });
-    }
+        if(!files || files.length === 0){
+            return res.status(404).json({
+                err: 'No files exist'
+            });
+        }
 
 //    files exist
-    return res.json(files);
-});
+        return res.json(files);
+    });
 });
 
 //GET/ files/:filename
@@ -114,39 +139,49 @@ app.get('/files/:filename', (req, res , next) => {
                 err: 'No files exists'
             });
         }
-    //    file exist
+        //    file exist
         return res.json(file);
-
     });
 });
 
 //GET/ iamges/:filename
 //display all the files in JSOn format
 app.get('/image/:filename', (req, res , next) => {
-    gfs.files.findOne({filename: req.params.filename}, (err,file) => {
-        if(!file || file.length === 0){
+    gfs.files.findOne({filename: req.params.filename}, (err, file) => {
+        if (!file || file.length === 0) {
             return res.status(404).json({
                 err: 'No files exists'
             });
         }
         //check if image
         if (file.contentType === 'image/jpeg' || file.contentType === 'img/png') {
- 
+
             const readstream = gfs.createReadStream(file.filename);
             readstream.pipe(res);
 
         }
-        else
-        {
+        else {
             res.status(404).json({
                 err: ' not an image format '
             });
         }
 
     });
+
 });
 
+//route delete /files/:id
+//delet files
+app.delete('/files/:id', (req, res) => {
+    gfs.remove({ _id: req.params.id, root: 'uploads'}, (err, gridStore) => {
+        if(err) {
+            return res.status(404).json({ err: err });
+        }
+        res.redirect('/jobSeeker');
+    });
+});
 
+//mongofile upload ends
 
 // db connection
 mongoose.connect(config.db);
