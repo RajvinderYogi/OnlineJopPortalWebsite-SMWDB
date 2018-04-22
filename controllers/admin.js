@@ -5,22 +5,27 @@ const Event = require('../models/event');
 let globalFunction =require('../config/globalFunctions');
 
 router.get('/', globalFunction.userLoggedIn, function(req, res, next) {
-    User.find({ $or: [ { userType: 'jobseeker' } ] },(err, jobseeker)=>{
-        User.find({ $or: [ { userType: 'employer' } ] },(err, employers)=>{
-            if (err){
-                console.log(err);
-            }
-            else {
-                res.render('admin/', {
-                    title:"All users here",
-                    jobseeker:jobseeker,
-                    employers:employers,
-                    user: req.user
-                });
-            }
+    User.find((err, users)=>{
+    User.find({ $or: [ { userType: 'jobseeker' } ] },(err, jobseeker)=> {
+        User.find({$or: [{userType: 'employer'}]}, (err, employers) => {
+            Event.find((err, events) => {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    res.render('admin/', {
+                        title: "All users here",
+                        jobseeker: jobseeker,
+                        employers: employers,
+                        events:events,
+                        users: users,
+                        user: req.user
+                    });
+                }
+            });
         });
     });
-  
+    });
 });
 //GET: /postJobs
 router.get('/jobseekers', globalFunction.userLoggedIn, (req, res, next) => {
