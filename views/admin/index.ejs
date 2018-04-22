@@ -2,8 +2,10 @@
 <% include ../shared/header.ejs %>
 <%if (user.userType == "admin"){%>
 <h1>Dashboard</h1>
-<h1>Jobseeker:<%= jobseeker.length %></h1>
+<h1><%= users.length %>Total no. of Users</h1>
+<h1>Jobseekers:<%= jobseeker.length %></h1>
 <h1>Employers:<%= employers.length %></h1>
+<h1>Events:<%= events.length %></h1>
 
 <div class="offset-4 col-md-6">
     <a class="btn btn-warning offset-1" href="/admin/jobseekers">Job Seekers</a>
