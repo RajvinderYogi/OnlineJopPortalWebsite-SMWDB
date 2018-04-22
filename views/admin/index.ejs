@@ -8,23 +8,22 @@
 <h1 class="admin-heading">Dashboard</h1>
     <hr>
     <div class="row">
-    <div class="col-4">
+    <div class="col-6">
         <h2 class="admin-h2">Total no. of Users</h2>
-        <p><a href="/admin/jobseekers" class="admin-para"><%= users.length %></a></p>
+        <p><a href="#" class="admin-para"><%= users.length %></a></p>
     </div>
-<div class="row">
-    <div class="col-4">
+    <div class="col-6">
+        <h2 class="admin-h2">Events:</h2>
+        <p><a href="/events/" class="admin-para"><%= employers.length %></a></p>
+    </div>
+    <div class="col-6">
         <h2 class="admin-h2">Jobseeker</h2>
         <p><a href="/admin/jobseekers" class="admin-para"><%= jobseeker.length %></a></p>
     </div>
-    <div class="col-4">
+    <div class="col-6">
         <h2 class="admin-h2">Employers</h2>
         <p><a href="/admin/employers" class="admin-para"><%= employers.length %></a></p>
     </div>
-    <!--<div class="col-4">-->
-        <!--<h2 class="admin-h2">Events:</h2>-->
-        <!--<p class="admin-para"><%= events.length %></p>-->
-    <!--</div>-->
 </div>
     <hr>
 <!--<div class="offset-4 col-md-6">-->
