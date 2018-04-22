@@ -1,89 +1,85 @@
 <% include ../views/shared/header%>
 
 <!--Employer Page Section-->
-
-<div class="employer_slider container">
-    <div class="row">
-        <div class="col-7">
-            <img src="/images/employer.png" alt="employer">
-        </div>
-
-        <div class="col-5">
-            <h4>EMPLOYER ZONE</h4>
-            <%if (user){%>
-            <%if (user.userType === 'employer'){%>
-            <a href="postJobs" class="btn btn-info">Post Jobs</a>
-            <%}%>
-            <%}%>
-            <a href="register" class="btn btn-primary">Register Now</a>
-        </div>
-    </div>
-</div>
-
-<!--Employer Service-->
-
-<div class="employer_service container">
-    <div class="row">
-        <div class="col-4">
-            <h4>Job Posting Service</h4>
-            <p>
-                Post your job in minute ! Find candidate
-                right way today. Advertise your job.
-                Make the Right Hire, Largest network
-            </p>
-        </div>
-        <div class="col-4">
-            <h4>Privacy Notice</h4>
-            <p>
-                You must read and understood the
-                privacy statement and posting notice
-                requirement before posting any
-                new job.
-            </p>
-        </div>
-
-        <div class="col-4">
-            <h4>Events List</h4>
-            <%if (user){%>
-            <% for(i=0; i<events.length; i++) { %>
-            <li><p class="col-6"><%= events[i].eventName %></p>
-                <%if (user.userType === 'employer'){%>
-                <a class="col-6" href="/postJobs/add">Post Job</a></li>
-            <%}%>
-            <%}%>
-            <%}
-            else{%>
-            <p>Please <a href="login">Login</a> to see the events </p>
-            <%}%>
-
-        </div>
-    </div>
-</div>
+<h3 class="page-heading">Employer Center</h3>
 <hr>
+<div class="employer_slider container">
 
-<!--Employer Choice -->
+    <img src="/images/employer-zone.jpg" style="height: 520px;"  alt="employer">
+    <%if (user){%>
+    <%if (user.userType === 'employer'){%>
+    <a href="postJobs" class="btn btn-info">Post Jobs</a>
+    <%}%>
+    <%}%>
+    <a href="register" class="btn btn-primary">Register Now as a Employer</a>
+    <!--Employer Service-->
 
-<div class="employer_choice container">
-    <h5>Why Choose SMWDB</h5>
-    <div class="row">
-        <div class="col-4">
-            <img src="/images/client.png" alt="client">
-            <h5>Large corporate clients</h5>
+    <div class="employer_service container">
+        <div class="row">
+            <div class="col-4">
+                <h4>Job Posting Service</h4>
+                <p>
+                    Post your job in minute ! Find candidate
+                    right way today. Advertise your job.
+                    Make the Right Hire, Largest network
+                </p>
+            </div>
+            <div class="col-4">
+                <h4>Privacy Notice</h4>
+                <p>
+                    You must read and understood the
+                    privacy statement and posting notice
+                    requirement before posting any
+                    new job.<br>
+                    You should give a brief description about the job,
+                    so that job seeker would found all the required information
+                    and apply for the job as accordingly.<br>
+                    <a href="#">Click here</a>to read more.
+                </p>
+            </div>
 
+            <div class="col-4">
+                <h4>Events List</h4>
+                <%if (user){%>
+                <% for(i=0; i<events.length; i++) { %>
+                <li><p class="col-6"><%= events[i].eventName %></p>
+                    <%if (user.userType === 'employer'){%>
+                    <a class="col-6" href="/postJobs/add">Post Job</a></li>
+                <%}%>
+                <%}%>
+                <%}
+                else{%>
+                <p>Please <a href="login">Login</a> to see the events </p>
+                <%}%>
+
+            </div>
         </div>
-        <div class="col-4">
-            <img src="/images/employer.jpg" alt="employer">
-            <h5>500+ Employer Partnership</h5>
+    </div>
+    <hr>
 
-        </div>
-        <div class="col-4">
-            <img src="/images/worldwide.jpg" alt="worldwide">
-            <h5>worldwide access</h5>
+    <!--Employer Choice -->
 
-        </div>
-        <!--<button class="btn btn-primary">Contact Us</button>-->
-    </div><hr>
-</div>
+    <div class="employer_choice container">
+        <h5>Why Choose SMWDB</h5>
+        <div class="row">
+            <div class="col-4">
+                <img src="/images/client.png" alt="client">
+                <h5>Large corporate clients</h5>
+
+            </div>
+            <div class="col-4">
+                <img src="/images/employer.jpg" alt="employer">
+                <h5>500+ Employer Partnership</h5>
+
+            </div>
+            <div class="col-4">
+                <img src="/images/worldwide.jpg" alt="worldwide">
+                <h5>worldwide access</h5>
+
+            </div>
+            <!--<button class="btn btn-primary">Contact Us</button>-->
+        </div><hr>
+    </div>
 
 
 <% include ../views/shared/footer %>

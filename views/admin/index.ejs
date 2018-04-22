@@ -1,19 +1,35 @@
-
 <% include ../shared/header.ejs %>
-<%if (user.userType == "admin"){%>
-<h1>Dashboard</h1>
-<h1>Jobseeker:<%= jobseeker.length %></h1>
-<h1>Employers:<%= employers.length %></h1>
 
-<div class="offset-4 col-md-6">
-    <a class="btn btn-warning offset-1" href="/admin/jobseekers">Job Seekers</a>
-    <a class="btn btn-primary offset-1" href="/admin/employers">Employers</a>
-    <a class="btn btn-info offset-1" href="/admin/addEvent">Create Event</a>
+<%if (user.userType == "admin"){%>
+<div class="container">
+
+<h1 class="admin-heading">Dashboard</h1>
+    <hr>
+<div class="row">
+    <div class="col-4">
+        <h2 class="admin-h2">Jobseeker</h2>
+        <p><a href="/admin/jobseekers" class="admin-para"><%= jobseeker.length %></a></p>
+    </div>
+    <div class="col-4">
+        <h2 class="admin-h2">Employers</h2>
+        <p><a href="/admin/employers" class="admin-para"><%= employers.length %></a></p>
+    </div>
+    <!--<div class="col-4">-->
+        <!--<h2 class="admin-h2">Events:</h2>-->
+        <!--<p class="admin-para"></p>-->
+    <!--</div>-->
 </div>
+    <hr>
+<!--<div class="offset-4 col-md-6">-->
+    <!--<a class="btn btn-warning offset-1" href="/admin/jobseekers">Job Seekers</a>-->
+    <!--<a class="btn btn-primary offset-1" href="/admin/employers">Employers</a>-->
+    <!--<a class="btn btn-info offset-1" href="/admin/addEvent">Create Event</a>-->
+<!--</div>-->
 <%}
 else{%>
 <h1> Sorry You do not have Permission to access this page.</h1>
 <%}%>
+</div>
 <% include ../shared/footer.ejs %>
 
 
