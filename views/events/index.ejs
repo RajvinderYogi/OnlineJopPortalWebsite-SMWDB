@@ -1,7 +1,10 @@
 
 <% include ../shared/header.ejs %>
+<div class="container">
+    <h1 style="text-align: center; font-weight: bold; padding: 10px">Event's List</h1>
 <%if (user.userType == "admin"){%>
-<table class="table table-striped table-hover">
+<table class="table table-striped table-bordered table-hover">
+    <caption>Event Information</caption>
     <tr>
         <th>Event</th>
         <th>Delete</th>
@@ -18,4 +21,5 @@
 else{%>
 <h1> Sorry You do not have Permission to access this page.</h1>
 <%}%>
+</div>
 <% include ../shared/footer.ejs %>

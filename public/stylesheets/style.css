@@ -346,12 +346,49 @@ form{
   padding: 25px;
   font-size: 2.5em;
 }
+
+.up-info{
+    border: black solid 1px;
+    color: black;
+    background-color: Transparent;
+    border-radius: 0px;
+}
+
+.up-info:hover{
+    background-color: black;
+    color: white;
+}
+
+.edit-form{
+    border: black 1px solid;
+    padding: 25px;
+    width: 80%;
+    border-radius: 8px 25px 8px;
+    margin: 25px;
+    margin-left: 8%;
+    justify-content: center;
+    padding-left: 9%;
+}
 /*======================================career page
 ===================================================*/
 
 .career_section h3{
   padding: 5px;
   text-align: center;
+}
+
+.career_section .btn-primary{
+    background: Transparent;
+    border: black solid 2px;
+    width: 50%;
+    color: black;
+    padding-left: 2%;
+    font-weight: bold;
+}
+
+.career_section .btn-primary:hover{
+    background: black;
+    color: white;
 }
 
 .career_info h5{
@@ -395,6 +432,21 @@ form{
   /*height: 500px;*/
 }
 
+.employer_slider .btn-info{
+    margin-top: -40%;
+    margin-left: -30%;
+    width: 300px;
+    background-color: Transparent;
+    color: black;
+    border-radius: 0px;
+    border: black solid 2px;
+}
+
+.employer_slider .btn-info:hover{
+    background-color: black;
+    color: lightgray;
+}
+
 .employer_slider .btn-primary{
   margin-top: -50%;
   margin-left: -30%;
@@ -402,7 +454,6 @@ form{
   background-color: Transparent;
   color: black;
   cursor: pointer;
-  overflow: hidden;
   border-radius: 0px;
   border: black solid 2px;
 
@@ -499,31 +550,121 @@ form{
   margin: 10px;
 }
 
-.staff_member{
+.staff_member {
+    border: black solid 1px;
+    border-radius: 10px 35px 10px;
+    background-color: #D6EAF8;
+    padding: 25px;
   display: inline-block;
   text-align: center;
   margin: 20px;
 }
 
 .staff_member .col-6{
-  background: lightgray;
-  border: black 1px solid;
-  padding: 25px;
+  /*background: lightgray;*/
+  /*border: black 1px solid;*/
+  /*padding: 25px;*/
 }
 
 .staff_member img{
-  width: 30%;
-  border-radius: 80px;
-  border: black 1px solid;
-  padding: 5px;
+  border-radius: 130px;
+    transition: transform .2s;
+    margin: 0 auto;
+  padding: 50px;
+    height: 250px;
+    width: 250px;
+}
+
+.staff_member img:hover{
+    transform: scale(1.5);
+}
+
+.contact_form{
+    border: black solid 1px;
+    border-radius: 10px 28px 10px;
+    margin-bottom: 2%;
+    background-color:#ABEBC6 ;
+    padding: 25px;
+}
+
+.contact_form .btn-primary{
+    width: 40%;
+    margin-left: 11%;
+    background: #2ECC71;
+    border: none;
+    color: black;
+}
+
+.contact_form .btn-primary:hover{
+    background-color: #1c7430;
+    color: white;
+}
+
+address{
+    padding-left: 3%;
+    background-image: url("../images/worldmap.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2%;
+    font-size: 1.6em;
+    font-weight: bold;
+
 }
 
 /* Admin Heading --------- */
 .admin-heading{
     text-align: center;
 }
-.admin-h2{
 
+.container .btn-success{
+    background: Transparent;
+    border: black solid 1px;
+    color: black;
+    border-radius: 0px;
+}
+
+.addevent {
+    padding: 8%;
+    border: black solid 1px;
+    border-radius: 10px 28px 10px;
+    margin: 25px;
+    text-align: center;
+    width: 70%;
+    margin-left: 10%;
+}
+.addevent label{
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.addevent input{
+    width: 100%;
+}
+
+.addevent button{
+    padding: 10px;
+    margin-top: 2%;
+    background: Transparent;
+    color: black;
+    border: black solid 1px;
+    width: 40%;
+}
+
+.addevent button:hover{
+    background: black;
+    color: white;
+}
+
+.container .btn-success:hover{
+    background: black;
+    color: white;
+}
+
+.addevent-head{
+    border: black solid 1px;
+   display: inline;
+    padding: 10px;
 }
 
 .admin-para{
