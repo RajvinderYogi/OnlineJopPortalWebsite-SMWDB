@@ -9,28 +9,32 @@ function EmpOrJob(that) {
     if (that.value == "employer") {
         document.getElementById("ifEmployerCName").style.display = "block";
         document.getElementById("ifEmployerCPerson").style.display = "block";
+        document.getElementById("ifEmployerWebsite").style.display = "block";
+        document.getElementById("ifEmployerHiringLocation").style.display = "block";
+        document.getElementById("ifEmployerCompDesc").style.display = "block";
     }
     else {
         document.getElementById("ifEmployerCName").style.display = "none";
         document.getElementById("ifEmployerCPerson").style.display = "none";
+        document.getElementById("ifEmployerWebsite").style.display = "none";
+        document.getElementById("ifEmployerHiringLocation").style.display = "none";
+        document.getElementById("ifEmployerCompDesc").style.display = "none";
     }
     if (that.value == "jobseeker") {
         document.getElementById("ifJobSeekerFName").style.display = "block";
         document.getElementById("ifJobSeekerLName").style.display = "block";
-        document.getElementById("ifJobSeekerPCode").style.display = "block";
-        document.getElementById("ifJobSeekerProvince").style.display = "block";
-        document.getElementById("ifJobSeekerCity").style.display = "block";
         document.getElementById("ifJobSeekerAGroup").style.display = "block";
         document.getElementById("ifJobSeekerEdu").style.display = "block";
+        document.getElementById("ifJobSeekerExp").style.display = "block";
+        document.getElementById("ifJobSeekerStatus").style.display = "block";
     }
     else {
         document.getElementById("ifJobSeekerFName").style.display = "none";
         document.getElementById("ifJobSeekerLName").style.display = "none";
-        document.getElementById("ifJobSeekerPCode").style.display = "none";
-        document.getElementById("ifJobSeekerProvince").style.display = "none";
-        document.getElementById("ifJobSeekerCity").style.display = "none";
         document.getElementById("ifJobSeekerAGroup").style.display = "none";
         document.getElementById("ifJobSeekerEdu").style.display = "none";
+        document.getElementById("ifJobSeekerExp").style.display = "none";
+        document.getElementById("ifJobSeekerStatus").style.display = "none";
     }
 }
 

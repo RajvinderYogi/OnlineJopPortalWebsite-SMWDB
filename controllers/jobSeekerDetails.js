@@ -51,7 +51,16 @@ router.post('/edit/:_id', globalFunction.userLoggedIn, (req, res, next)=>{
                 lName:req.body.lName,
                 cName:req.body.cName,
                 cPerson: req.body.cPerson,
-                phoneNo: req.body.phoneNo
+                phoneNo: req.body.phoneNo,
+                province: req.body.province,
+                city: req.body.city,
+                pCode: req.body.pCode,
+                AGroup: req.body.AGroup,
+                education: req.body.education,
+                status: req.body.status,
+                website: req.body.website,
+                hiringLocation: req.body.hiringLocation,
+                compDesc:req.body.compDesc
             }}, null, (err)=>{
             if (err){
                 console.log(err);
