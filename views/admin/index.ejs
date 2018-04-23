@@ -1,4 +1,17 @@
-<% include ../shared/header.ejs %>
+<% include ../shared/header.ejs %>.
+
+
+
+<!--Announcement section-->
+<div class="announcement_section">
+    <%if (!user){%>
+    <%}
+    <!--DISPLAY ANNOUNCEMENT WHEN USER LOGIN -->
+    else{%>
+    <%if (user){%>
+    <%= announcements.title %>
+    <%}%><%}%>
+</div>
 
 <%if (user.userType == "admin"){%>
 
@@ -24,6 +37,11 @@
         <h2 class="admin-h2">Employers</h2>
         <p><a href="/admin/employers" class="admin-para"><%= employers.length %></a></p>
     </div>
+    <div class="col-6">
+         <h2 class="admin-h2">Announcement</h2>
+        <p><a href="/admin/announcement" class="admin-para"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/1186-200.png" style="width: 15%"></a></p>
+    </div>
+
 </div>
     <hr>
 <!--<div class="offset-4 col-md-6">-->

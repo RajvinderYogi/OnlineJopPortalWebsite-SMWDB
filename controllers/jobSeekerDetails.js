@@ -1,6 +1,8 @@
 let express = require('express');
 let router = express.Router();
 let User = require('../models/user');
+const Announcement = require('../models/announcement');
+
 let globalFunction =require('../config/globalFunctions');
 
 /* GET  page. */
@@ -14,6 +16,8 @@ router.get('/', globalFunction.userLoggedIn, (req, res, next) => {
             res.render('jobSeekers/index', {
                 title:"Job Seeker Details",
                 user: req.user,
+                announcements: announcements,
+
                 users:users
             });
         }

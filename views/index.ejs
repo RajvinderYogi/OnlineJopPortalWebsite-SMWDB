@@ -1,5 +1,16 @@
 <% include ../views/shared/header.ejs%>
 
+<!--Announcement section-->
+<div class="announcement_section">
+    <%if (!user){%>
+    <%}
+    <!--DISPLAY ANNOUNCEMENT WHEN USER LOGIN -->
+    else{%>
+    <%if (user){%>
+    <%= announcements.title %>
+    <%}%><%}%>
+</div>
+
 <!--main section-->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
