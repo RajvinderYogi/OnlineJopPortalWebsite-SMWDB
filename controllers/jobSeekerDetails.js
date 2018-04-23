@@ -8,19 +8,20 @@ let globalFunction =require('../config/globalFunctions');
 /* GET  page. */
 router.get('/', globalFunction.userLoggedIn, (req, res, next) => {
 
-    User.find((err, users)=>{
-        if (err){
-            console.log(err);
-        }
-        else {
-            res.render('jobSeekers/index', {
-                title:"Job Seeker Details",
-                user: req.user,
-                announcements: announcements,
-
-                users:users
-            });
-        }
+    User.find((err, users)=> {
+        Announcement.find((err, announcements) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.render('jobSeekers/index', {
+                    title: "Job Seeker Details",
+                    user: req.user,
+                    users: users,
+                    announcements: announcements,
+                });
+            }
+        });
     });
 });
 

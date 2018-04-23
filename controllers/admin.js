@@ -8,7 +8,7 @@ let globalFunction =require('../config/globalFunctions');
 
 router.get('/', globalFunction.userLoggedIn, function(req, res, next) {
     User.find((err, users)=>{
-    User.find((err, announcements)=>{
+    Announcement.find((err, announcements)=>{
     User.find({ $or: [ { userType: 'jobseeker' } ] },(err, jobseeker)=> {
         User.find({$or: [{userType: 'employer'}]}, (err, employers) => {
 
