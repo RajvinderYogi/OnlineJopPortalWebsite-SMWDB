@@ -1,6 +1,7 @@
 <% include ../shared/header.ejs%>
-<h1>Update Your Profile</h1>
-<form method="post">
+<div class="container">
+<h1 class="log-head"><%= user.fName%><%= user.cName%> update your Profile</h1>
+<form method="post" class="edit-form">
     <%if(user.userType == "jobseeker"){%>
     <fieldset class="form-group">
         <label class="control-label col-md-2" for="fName">First Name*: </label>
@@ -24,7 +25,7 @@
             <label class="control-label col-md-2" for="phoneNo">Contact No*: </label>
             <input  type="tel" name="phoneNo" id="phoneNo" value="<%= user.phoneNo%>" required />
         </fieldset>
-        <button class="offset-2 btn btn-primary col-md-1">Update</button>
+        <button class="offset-2 btn up-info btn-primary col-md-3">Update</button>
 </form>
-
+</div>
 <% include ../shared/footer.ejs%>
