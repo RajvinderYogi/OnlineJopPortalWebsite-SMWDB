@@ -76,6 +76,8 @@
         <label class="control-label col-md-2" for="cPerson">Contact Person*: </label>
         <input name="cPerson" id="cPerson" value="<%= user.cPerson%>" required />
 
+
+
     </fieldset>
         <fieldset class="form-group">
             <label class="control-label col-md-2" for="phoneNo">Contact No*: </label>
@@ -97,6 +99,10 @@
     <fieldset class="form-group">
         <label class="control-label col-md-2" for="pCode">Postal Code*</label>
         <input type="text" name="pCode" id="pCode" value="<%= user.pCode%>" required >
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="website">Company Website*</label>
+        <input type="text" value="<%= user.website %>" name="website" id="website" >
     </fieldset>
     <fieldset class="form-group">
         <label class="control-label col-md-2" for="hiringLocation">In what location(s) are you hiring? *</label>

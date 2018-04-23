@@ -1,0 +1,6 @@
+<b class="announcement_notification col-offset-4"><%if (user){%>
+    <% for(let i = 0; i < announcements.length; i++) { %>
+    <p><%= announcements[i].title %></p>
+    <% } %>
+<%}%>
+</b>
