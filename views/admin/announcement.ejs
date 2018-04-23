@@ -1,0 +1,15 @@
+<% include ../shared/header.ejs %>
+<%if (user.userType == "admin"){%>
+<div class="announcement_section container">
+  <h4>Announcement list</h4>
+  <a href="/admin/add_announce">Add New Announcement</a>
+    <% for(let i = 0; i < announcements.length; i++) { %>
+  <section>
+    <p><%= announcements[i].title %></p>
+    <a class="btn btn-danger" href="/admin/delete/<%= announcements[i]._id %>"
+       onclick="return confirm('Are you sure want to delete this ?')">Delete</a><hr>
+  </section>
+    <% } %>
+</div>
+<%}%>
+<% include ../shared/footer.ejs %>
