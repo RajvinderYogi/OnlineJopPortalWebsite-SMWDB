@@ -52,6 +52,7 @@ router.get('/announcement', globalFunction.userLoggedIn, function(req,res, next)
 
 });
 
+
 //get add new announcement page
 router.get('/add_announce', globalFunction.userLoggedIn, function(req,res, next){
     res.render('admin/add_announce', {title: 'new_announcement', user:req.user});
@@ -88,6 +89,26 @@ router.get('/delete/:_id', globalFunction.userLoggedIn, (req, res, next) => {
         }
     })
 });
+
+//get notification page
+
+
+router.get('/notification', globalFunction.userLoggedIn, function(req,res, next){
+    Announcement.find((err, announcements) => {
+        if (err){
+            cosole.log(err)
+        }
+        else {
+            res.render('admin/notification', {title: 'SMEDB-announcement',
+                announcements: announcements,
+                user:req.user
+            });
+        }
+    });
+
+});
+
+
 
 
 //GET: /postJobs

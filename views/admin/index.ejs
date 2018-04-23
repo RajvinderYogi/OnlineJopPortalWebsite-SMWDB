@@ -1,22 +1,8 @@
-<% include ../shared/header.ejs %>.
-
-
-
-<!--Announcement section-->
-<div class="announcement_section">
-    <%if (!user){%>
-    <%}
-    <!--DISPLAY ANNOUNCEMENT WHEN USER LOGIN -->
-    else{%>
-    <%if (user){%>
-    <%= announcements.title %>
-    <%}%><%}%>
-</div>
+<% include ../shared/header.ejs %>
 
 <%if (user.userType == "admin"){%>
 
 <div class="container">
-
 
 <h1 class="admin-heading">Dashboard</h1>
     <hr>

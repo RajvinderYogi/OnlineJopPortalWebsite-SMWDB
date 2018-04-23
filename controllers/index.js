@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 let passport =require('passport');
-let User = require('../models/user');
-let Event = require('../models/event');
-let Announcement = require('../models/announcement');
+const User = require('../models/user');
+const Event = require('../models/event');
+const Announcement = require('../models/announcement');
 
 
 const nodemailer = require('nodemailer');
@@ -21,41 +21,87 @@ router.get('/', function(req, res, next) {
             else {
                 res.render('index', {
                     title: "SMWDB - Home",
-                    announcements: announcements,
                     users: users,
-                    user: req.user
+                    user: req.user,
+                    announcements: announcements
                 });
             }
         });
     });
     router.get('/jobSeeker', function (req, res, next) {
-        res.render('jobSeeker', {title: 'SMWDB - Job Seeker', user: req.user});
+        Announcement.find((err, announcements) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.render('jobSeeker', {title: 'SMWDB - Job Seeker',
+                    user: req.user,
+                    announcements: announcements
+                });
+            }
+        });
     });
     router.get('/employer', function (req, res, next) {
 //     res.render('employer', { title: 'SMWDB - Employers', user: req.user, events:events  });
 // });
         Event.find((err, events) => {
+            Announcement.find((err, announcements) => {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    res.render('employer', {
+                        title: "SMWDB - Employer",
+                        events: events,
+                        user: req.user,
+                        announcements: announcements
+                    });
+                }
+            });
+        });
+    });
+    router.get('/help', function (req, res, next) {
+        Announcement.find((err, announcements) => {
             if (err) {
                 console.log(err);
             }
             else {
-                res.render('employer', {
-                    title: "SMWDB - Employer",
-                    events: events,
-                    user: req.user
+                res.render('help', {
+                    title: 'SMWDB - help',
+                    user: req.user,
+                    announcements: announcements,
                 });
             }
         });
     });
-    router.get('/help', function (req, res, next) {
-        res.render('help', {title: 'SMWDB - Contact Us', user: req.user});
-    });
     router.get('/contactUs', function (req, res, next) {
-        res.render('contactUs', {title: 'SMWDB - Contact Us', user: req.user});
+        Announcement.find((err, announcements) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.render('contactUs', {
+                    title: 'SMWDB - Contact Us',
+                    user: req.user,
+                    announcements: announcements,
+                });
+            }
+        });
     });
     //get success sent page
     router.get('/success_sent', function(req, res, next) {
-        res.render('success_sent', { title: 'SMWDB - message', user: req.user  });
+        Announcement.find((err, announcements) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.render('success_sent', {
+                    title: 'SMWDB - success_sent',
+                    user: req.user,
+                    announcements: announcements,
+                });
+            }
+        });
     });
 
     router.get('/register', (req, res, next) => {
