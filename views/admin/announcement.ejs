@@ -1,11 +1,11 @@
 <% include ../shared/header.ejs %>
 <%if (user.userType == "admin"){%>
 <div class="announcement_section container">
-  <h4>Announcement list</h4>
-  <a href="/admin/add_announce">Add New Announcement</a>
+  <h3 style="text-align: center; font-weight: bold; padding: 20px">Announcement list</h3>
+  <a class="btn btn-ann" href="/admin/add_announce">Add New Announcement</a>
     <% for(let i = 0; i < announcements.length; i++) { %>
   <section>
-    <p><%= announcements[i].title %></p>
+    <p style="padding: 10px"><%= announcements[i].title %></p>
     <a class="btn btn-danger" href="/admin/delete/<%= announcements[i]._id %>"
        onclick="return confirm('Are you sure want to delete this ?')">Delete</a><hr>
   </section>

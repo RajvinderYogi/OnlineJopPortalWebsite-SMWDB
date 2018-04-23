@@ -1,11 +1,12 @@
 <% include ../shared/header.ejs%>
-<h1>Add new Announcement</h1>
+<div class="container add-ann">
+<h1 style="text-align: center; font-weight: bold; padding: 20px">Add new Announcement</h1>
 <form method="post">
   <fieldset class="form-group">
-    <label class="control-label col-md-2" for="title">Announcement*: </label>
+    <label class="control-label col-md-2" for="title">Announcement*: </label><br>
     <input name="title" id="title" required />
   </fieldset>
   <button class="offset-2 btn btn-primary">Save</button>
 </form>
-
+</div>
 <% include ../shared/footer.ejs%>

@@ -718,6 +718,68 @@ address{
     text-decoration: none;
 }
 
+.announcement_notification {
+    text-align: center;
+    padding: 20px;
+    background-color: #E74C3C;
+    color: whitesmoke;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    transition: .2s;
+    margin-left: 25%;
+}
+
+.announcement_notification:hover{
+    transform: scale(1.5);
+}
+
+.btn-ann{
+    background: Transparent;
+    border: black solid 1px;
+    color: black;
+    border-radius: 0px;
+    padding: 10px;
+}
+
+.btn-ann:hover{
+    background: black;
+    color: white;
+}
+
+.add-ann{
+    border: black solid 1px;
+    border-radius: 12px 30px 12px;
+    padding: 4%;
+    margin-bottom: 1%;
+}
+.add-ann label{
+    font-size: 2.0em;
+    text-align: center;
+    padding-left: 30%;
+    font-weight: bold;
+}
+
+.add-ann input{
+    width: 50%;
+   margin-left: 18%;
+}
+
+.add-ann button{
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 27%;
+    background: Transparent;
+    color: black;
+    border: black solid 1px;
+    width: 30%;
+}
+
+.add-ann button:hover{
+    background: black;
+    color: white;
+}
 /*footer section
 -------------------*/
 footer {
