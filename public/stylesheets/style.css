@@ -510,23 +510,56 @@ form{
 
 .resume_help{
   padding: 10px;
+    border: black solid 1px;
 }
 
 .resume_help img{
-  width: 70%;
+  width: 60%;
+    padding: 5px;
+}
+
+.resume_help h3{
+    border: black solid 1px;
+    color: white;
+    background: #1c7430;
+    padding: 10px;
 }
 
 .search_tips{
   padding: 10px;
+    border: black solid 1px;
 
 }
 .search_tips img {
   margin: 10px;
-  width: 100%;
+  width: 65%;
+    padding: 5px;
+}
+
+.search_tips h3{
+    border: black solid 1px;
+    color: white;
+    background: #1c7430;
+    padding: 10px;
 }
 
 .career_news a{
   color: black;
+}
+
+.card-header{
+    background-color: #1c7430;
+    color: white;
+    height: 80px;
+    margin-bottom: 2%;
+}
+
+.card-body{
+    text-align: center;
+    font-size: 1.6em;
+    border: black solid 1px;
+    padding: 10px;
+    margin-bottom: 4%;
 }
 
 

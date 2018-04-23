@@ -63,6 +63,11 @@ router.post('/register', function (req, res, next) {
             pCode: req.body.pCode,
             AGroup: req.body.AGroup,
             education: req.body.education,
+            experience: req.body.experience,
+            status: req.body.status,
+            website: req.body.website,
+            hiringLocation: req.body.hiringLocation,
+            compDesc:req.body.compDesc
         }),
         req.body.password,
         function(err, user) {
