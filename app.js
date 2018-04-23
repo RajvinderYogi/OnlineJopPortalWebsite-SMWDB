@@ -50,6 +50,7 @@ app.use(passport.session());
 
 // reference User model
 const User = require('./models/user');
+const Announcement = require('./models/announcement');
 
 passport.use(User.createStrategy());
 
