@@ -17,10 +17,37 @@
         <td><%= user.lName %></td>
     </tr>
     <tr>
+        <td>City/Town:</td>
+        <td><%= user.city %></td>
+    </tr>
+    <tr>
+        <td>Province:</td>
+        <td><%= user.province %></td>
+    </tr>
+    <tr>
+        <td>Postal Code:</td>
+        <td><%=user.pCode%></td>
+    </tr>
+    <tr>
         <td>Contact number:</td>
         <td><%= user.phoneNo %></td>
     </tr>
-
+    <tr>
+        <td>Age Group:</td>
+        <td><%= user.AGroup %></td>
+    </tr>
+    <tr>
+        <td>Level of Education:</td>
+        <td><%= user.education %></td>
+    </tr>
+    <tr>
+        <td>Level of Experience:</td>
+        <td><%= user.experience %></td>
+    </tr>
+    <tr>
+        <td>Currently:</td>
+        <td><%= user.status %></td>
+    </tr>
 </table>
 
 <%}%>
@@ -43,7 +70,29 @@
         <td>Contact number:</td>
         <td><%= user.phoneNo %></td>
     </tr>
-
+    <tr>
+        <td>City/Town:</td>
+        <td><%= user.city %></td>
+    </tr>
+    <tr>
+        <td>Province:</td>
+        <td><%= user.province %></td>
+    </tr>
+    <tr>
+        <td>Postal Code:</td>
+        <td><%=user.pCode%></td>
+    </tr>
+    <tr>
+        <td>Company Website:</td>
+        <td><%= user.website %></td>
+    </tr>
+    <tr>
+        <td>Hiring Location:</td>
+        <td><%= user.hiringLocation %></td>
+    </tr><tr>
+        <td>Company Description:</td>
+        <td><%= user.compDesc %></td>
+    </tr>
 </table>
 <%}%>
 <a href="../jobSeekers/edit/<%= user._id%>" class="btn col-md-3">Update Information</a>

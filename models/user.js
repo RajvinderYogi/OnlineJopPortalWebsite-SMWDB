@@ -36,6 +36,21 @@ const userSchema = new mongoose.Schema({
     },
     education:{
         type: String
+    },
+    experience:{
+        type: String
+    },
+    status:{
+        type: String
+    },
+    website:{
+        type: String
+    },
+    hiringLocation:{
+        type: String
+    },
+    compDesc:{
+        type: String
     }
 });
 userSchema.plugin(passportLocalMongoose);

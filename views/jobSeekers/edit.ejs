@@ -10,6 +10,57 @@
         <label class="control-label col-md-2" for="lName">Last Name*: </label>
         <input name="lName" id="lName" value="<%= user.lName%>" required />
     </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="username">Username*: </label>
+        <input readonly name="username" id="username" value="<%= user.username%>" required style="background-color:#eeeeee"/>
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="city">City*: </label>
+        <input name="city" id="city" value="<%= user.city%>" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="province">Province*: </label>
+        <input name="province" id="province" value="<%= user.province%>" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="pCode">Postal Code*</label>
+        <input type="text" name="pCode" id="pCode" value="<%= user.pCode%>" required >
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="AGroup">Age Group</label>
+        <select name="AGroup" id="AGroup">
+            <option selected><%= user.AGroup%></option>
+            <option>18-24</option>
+            <option>25-29</option>
+            <option>30-34</option>
+            <option>35-44</option>
+            <option>45-55</option>
+            <option>56-64</option>
+            <option>65+</option>
+        </select>
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="education">Level of training/education</label>
+        <select name="education" id="education" required>
+            <option selected><%= user.education %></option>
+            <option>Some High School</option>
+            <option>Completed High School</option>
+            <option>Some College/University</option>
+            <option>Completed College/University</option>
+            <option>Apprenticeship, Trades, Certificate, or Diploma</option>
+        </select>
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="status">Currently</label>
+        <select name="status" id="status" required>
+            <option selected><%= user.status %></option>
+            <option>Unemployed</option>
+            <option>Employed Part-Time</option>
+            <option>Employed Full-Time</option>
+            <option>Self-Employed</option>
+            <option>Retired</option>
+        </select>
+    </fieldset>
     <%}%>
     <%if(user.userType == "employer"){%>
     <fieldset class="form-group">
@@ -20,10 +71,35 @@
         <label class="control-label col-md-2" for="cPerson">Contact Person*: </label>
         <input name="cPerson" id="cPerson" value="<%= user.cPerson%>" required />
         <%}%>
+    </fieldset>
         <fieldset class="form-group">
             <label class="control-label col-md-2" for="phoneNo">Contact No*: </label>
             <input  type="tel" name="phoneNo" id="phoneNo" value="<%= user.phoneNo%>" required />
         </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="username">Username*: </label>
+        <input readonly name="username" id="username" value="<%= user.username%>" required style="background-color:#eeeeee"/>
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="city">City*: </label>
+        <input name="city" id="city" value="<%= user.city%>" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="province">Province*: </label>
+        <input name="province" id="province" value="<%= user.province%>" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="pCode">Postal Code*</label>
+        <input type="text" name="pCode" id="pCode" value="<%= user.pCode%>" required >
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="hiringLocation">In what location(s) are you hiring? *</label>
+        <input type="text" value="<%= user.hiringLocation%>" name="hiringLocation" id="hiringLocation" >
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2" for="compDesc">Company Description or Bio*</label>
+        <textarea  name="compDesc" id="compDesc" ><%= user.compDesc %></textarea>
+    </fieldset>
         <button class="offset-2 btn btn-primary col-md-1">Update</button>
 </form>
 
