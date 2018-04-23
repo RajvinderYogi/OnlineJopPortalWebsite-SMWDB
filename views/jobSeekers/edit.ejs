@@ -71,7 +71,7 @@
     <fieldset class="form-group">
         <label class="control-label col-md-2" for="cPerson">Contact Person*: </label>
         <input name="cPerson" id="cPerson" value="<%= user.cPerson%>" required />
-        <%}%>
+
     </fieldset>
         <fieldset class="form-group">
             <label class="control-label col-md-2" for="phoneNo">Contact No*: </label>
@@ -102,7 +102,11 @@
         <label class="control-label col-md-2" for="compDesc">Company Description or Bio*</label>
         <textarea  name="compDesc" id="compDesc" ><%= user.compDesc %></textarea>
     </fieldset>
+
+    <%}%>
+</form>
         <button class="offset-2 btn up-info btn-primary col-md-3">Update</button>
+
 
 </form>
 </div>
