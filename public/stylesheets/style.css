@@ -269,6 +269,7 @@ form{
   position: relative;
   justify-content: center;
   border: gray 1px solid;
+  width: 50%;
   border-radius: 10px;
   margin-bottom: 50px;
 }
