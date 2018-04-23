@@ -40,17 +40,21 @@
                         <label class="control-label col-md-2" for="confirmPassword">Confirm Password*</label>
                         <input type="password" placeholder="Password" name="confirmPassword" id="confirmPassword" required>
                     </fieldset>
-                    <fieldset class="form-group" id="ifJobSeekerCity" style="display:none;">
+                    <fieldset class="form-group">
                         <label class="control-label col-md-2" for="city">City/Town*</label>
                         <input type="text" placeholder="City" name="city" id="city" >
                     </fieldset>
-                    <fieldset class="form-group" id="ifJobSeekerProvince" style="display:none;">
+                    <fieldset class="form-group" >
                         <label class="control-label col-md-2" for="province">Province*</label>
                         <input type="text" placeholder="Province" name="province" id="province" >
                     </fieldset>
-                    <fieldset class="form-group" id="ifJobSeekerPCode" style="display:none;">
+                    <fieldset class="form-group">
                         <label class="control-label col-md-2" for="pCode">Postal Code*</label>
                         <input type="text" placeholder="Postal Code" name="pCode" id="pCode" >
+                    </fieldset>
+                    <fieldset class="form-group" id="ifEmployerWebsite" style="display:none;">
+                        <label class="control-label col-md-2" for="website">Company Website*</label>
+                        <input type="text" placeholder="Company Website" name="website" id="website" >
                     </fieldset>
                     <fieldset class="form-group">
                         <label class="control-label col-md-2" for="phoneNo">Phone Number</label>
@@ -70,15 +74,46 @@
                         </select>
                     </fieldset>
                     <hr>
+                    <fieldset class="form-group" id="ifEmployerHiringLocation" style="display:none;">
+                        <label class="control-label col-md-2" for="hiringLocation">In what location(s) are you hiring? *</label>
+                        <input type="text" placeholder="Location's List" name="hiringLocation" id="hiringLocation" >
+                    </fieldset>
+                    <fieldset class="form-group" id="ifEmployerCompDesc" style="display:none;">
+                        <label class="control-label col-md-2" for="compDesc">Company Description or Bio*</label>
+                        <textarea placeholder="Company Description" name="compDesc" id="compDesc" >
+                            </textarea>
+                    </fieldset>
                     <fieldset class="form-group" id="ifJobSeekerEdu" style="display:none;">
                         <label class="control-label col-md-6" for="education"><strong>What is your level of training/education completed?</strong></label>
-                        <select type="radio" name="education" id="education" >
+                        <select name="education" id="education" >
                             <option disabled selected>Choose...</option>
                             <option>Some High School</option>
                             <option>Completed High School</option>
                             <option>Some College/University</option>
                             <option>Completed College/University</option>
                             <option>Apprenticeship, Trades, Certificate, or Diploma</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerExp" style="display:none;">
+                        <label class="control-label col-md-6" for="experience"><strong>How long have you been looking for work?</strong></label>
+                        <select name="experience" id="experience" >
+                            <option disabled selected>Choose...</option>
+                            <option>Fresher</option>
+                            <option>up to 6 Months</option>
+                            <option>7 to 12 Months</option>
+                            <option>1 year</option>
+                            <option>More than 1 Year</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group" id="ifJobSeekerStatus" style="display:none;">
+                        <label class="control-label col-md-6" for="status"><strong>Are you currently?</strong></label>
+                        <select name="status" id="status" >
+                            <option disabled selected>Choose...</option>
+                            <option>Unemployed</option>
+                            <option>Employed Part-Time</option>
+                            <option>Employed Full-Time</option>
+                            <option>Self-Employed</option>
+                            <option>Retired</option>
                         </select>
                     </fieldset>
                     <!--<fieldset class="form-group">-->

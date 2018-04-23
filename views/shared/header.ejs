@@ -47,8 +47,13 @@
             <div class="dropdown">
                     <a onclick="myFunction()" href="#" class="dropbtn"><%= user.username%></a>
                     <div id="myDropdown" class="dropdown-content">
+                        <%if (user.userType === "admin"){%>
+                        <a href="/logout">Logout</a>
+                        <%}
+                        else{%>
                         <a href="/jobSeekers/">Profile</a>
                         <a href="/logout">Logout</a>
+                        <%}%>
                     </div>
                 </div>
 
