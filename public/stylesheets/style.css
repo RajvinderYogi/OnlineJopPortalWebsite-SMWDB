@@ -13,6 +13,10 @@ body{
 .nav{
   margin: 5px;
 }
+.hamburger{
+    height: 50px !important;
+    width: 50px !important;
+}
 .action{
   position: absolute;
   top: -10px;
@@ -266,7 +270,6 @@ form{
   justify-content: center;
   border: gray 1px solid;
   border-radius: 10px;
-  width: 50%;
   margin-bottom: 50px;
 }
 .loginForm{
