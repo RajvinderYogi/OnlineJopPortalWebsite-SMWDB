@@ -19,16 +19,14 @@
         </div>
         <hr>
             <!--Career Info Section -->
-            <div class="career_info">
-                <!--<h4>Build Your Own Career</h4>-->
-                <!--<p>-->
-                    <!--We are giving you best opportunity to find your career jobs into your field.here you can find more than 50,000+ jobs and more 1000+ partenship with employer. Other than that our expert will help you to find your job.-->
-                    <!--You can also find a number of job resource and career advice to find a new jobs and we will tell you what sort of top three problems everybody do when they are applying for new jobs. Here you can also find best  tools for interview prepartion, new resume, latest news related to jobs and career quizs quizzes and tips how to make crticial decision during-->
-                    <!--tough time-->
-                <!--</p>-->
-                <!--Career Advice -->
 
-                <h4>Career Advices</h4>
+
+
+                <hr>
+                <!--Career Advice -->
+                <div class="my-4 ">
+                <h5>Career Advice</h5>
+
                 <div class="row">
                     <!--Most viewed -->
                     <div class="col-4">
@@ -56,6 +54,42 @@
                             time management, good communication skills. <a href="#">Click here</a> to apply for this job.</p>
                     </div>
                 </div>
+                </div>
+    <hr>
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <h1  class="text-center display-4 my-4">
+                    Please upload your Resume
+                </h1>
+
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <div class="custom-file mb-3">
+                        <input type="file" name="file" id="file" class="custom-file-input">
+                        <label for="file" class="custom-file-label">choose file</label>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-primary btn-block">
+                </form>
+                <hr>
+                <%if(files){ %>
+                <%  files.forEach(function(file) {%>
+                <div class="card card-body mb-3">
+                    <% if(file.isImage) { %>
+                    <img src="image/<%= file.filename %>" alt="">
+                    <% } else {%>
+                    <%=file.filename %>
+                    <% }%>
+                    <form method="POST" action="/files/<%= file._id %>?_method=DELETE">
+                        <button class="btn btn-danger btn-block mt-4">Delete</button>
+                    </form>
+                </div>
+                <% })%>
+                <% } else {%>
+                <p> No file to show</p>
+                <%}%>
+
+                <hr>
+
+            </div>
             </div>
 </div>
     <hr>
