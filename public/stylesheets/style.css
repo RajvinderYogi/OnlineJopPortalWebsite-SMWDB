@@ -339,6 +339,11 @@ form{
 .ad_section img{
   width: 60%;
 }
+.ad_section btn-primary
+{
+
+}
+
 
 /* Job Seeker Info */
 .jobseekerhead{
@@ -378,12 +383,12 @@ form{
 }
 
 .career_section .btn-primary{
-    background: Transparent;
+    background: Transparent !important;
     border: black solid 2px;
-    width: 50%;
-    color: black;
+    width: 130%;
+    color: black !important;
     padding-left: 2%;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .career_section .btn-primary:hover{
