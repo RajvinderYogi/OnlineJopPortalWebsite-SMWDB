@@ -1,6 +1,7 @@
 <% include ../shared/header.ejs %>
 
 <%if (user.userType == "admin"){%>
+
 <div class="container">
 <div class="row">
     <div class="col-1">
@@ -11,6 +12,11 @@
     </div>
 </div>
     <hr>
+    <div class="row">
+    <div class="col-4">
+        <h2 class="admin-h2">Total no. of Users</h2>
+        <p><a href="/admin/jobseekers" class="admin-para"><%= users.length %></a></p>
+    </div>
 <div class="row">
     <div class="col-4">
         <h2 class="admin-h2">Jobseeker</h2>
@@ -22,7 +28,7 @@
     </div>
     <!--<div class="col-4">-->
         <!--<h2 class="admin-h2">Events:</h2>-->
-        <!--<p class="admin-para"></p>-->
+        <!--<p class="admin-para"><%= events.length %></p>-->
     <!--</div>-->
 </div>
     <hr>
