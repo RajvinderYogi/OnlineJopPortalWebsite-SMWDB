@@ -1,0 +1,61 @@
+<% include ../views/shared/header%>
+<div class="contact container">
+  <h2>Contact Us </h2><hr>
+  <div class="staff_member container">
+    <div class="row">
+      <div class="col-6">
+        <img src="/images/susan_laycock.jpg" alt="susan_laycock" />
+        <h3>Susan Laycock</h3>
+        <p>Executive Director</p>
+      </div>
+      <div class="col-6">
+        <img src="/images/Rob_shepard.jpg" alt="rob_sherpard" />
+        <h3>Rob Shepard</h3>
+        <p>Project Facilitator</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p style="text-align: center; padding: 15px">We are here to help you if have any question, we will get you soon</p>
+  <div class="row">
+
+    <!--Contact_detail form-->
+    <div class="contact_detail col-4">
+      <address>
+        OFFICE LOCATION: <br>
+        18 Alliance blvd.
+        Unit 22,<br>
+        Barrie, ON L4M 5A5<br><br>
+
+        tel: 705.725.1011<br>
+        or 1.800.337.4598<br>
+        fax: 1.888.739.8347
+      </address>
+    </div>
+    <!--Contact form-->
+    <div class="contact_form col-8">
+      <div class="alert alert-info col-offset-4">
+        Message Sent
+      </div>
+      <form method="post" action="/send">
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input class="col-md-8 form-control" id="name" type="text" name="name" placeholder="Enter Your Name" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-envelope-open icon"></i>
+          <Input class="col-md-8 form-control" id="Email" type="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-comment icon"></i>
+          <textarea class="col-md-8 form-control" placeholder="Your Message" name="message" id="message" style="height: 150px"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+    <!--Company senior Officer-->
+  </div>
+
+</div>
+
+<% include ../views/shared/footer %>

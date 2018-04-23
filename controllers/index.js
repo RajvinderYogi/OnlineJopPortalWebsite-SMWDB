@@ -53,6 +53,10 @@ router.get('/', function(req, res, next) {
     router.get('/contactUs', function (req, res, next) {
         res.render('contactUs', {title: 'SMWDB - Contact Us', user: req.user});
     });
+    //get success sent page
+    router.get('/success_sent', function(req, res, next) {
+        res.render('success_sent', { title: 'SMWDB - message', user: req.user  });
+    });
 
     router.get('/register', (req, res, next) => {
         res.render('register', {
@@ -164,8 +168,8 @@ router.get('/', function(req, res, next) {
             console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
 
-            res.redirect('contactUs');
+            res.redirect('success_sent');
         });
     });
-})
+});
 module.exports = router;
