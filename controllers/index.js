@@ -64,7 +64,7 @@ router.get('/', function(req, res, next) {
         Announcement.find((err, announcements) => {
             if (err) {
                 console.log(err);
-          
+            }
             else {
                 res.render('help', {
                     title: 'SMWDB - help',
